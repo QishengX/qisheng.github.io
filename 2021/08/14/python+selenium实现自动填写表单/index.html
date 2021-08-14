@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, github, Web, HTML,CSS,JavaScript">
+    <meta name="keywords" content="基于Python+selenium实现自动填写表单, github, Web, HTML,CSS,JavaScript">
     <meta name="description" content="学习、记录、分享">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 徐齐胜的博客</title>
+    <title>基于Python+selenium实现自动填写表单 | 徐齐胜的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">基于Python+selenium实现自动填写表单</h1>
                 </div>
             </div>
         </div>
@@ -429,12 +429,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
+                                <span class="chip bg-color">Web自动化</span>
+                            </a>
+                        
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/selenium/">
+                                <span class="chip bg-color">selenium</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/" class="post-category">
+                                自动化
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -464,19 +485,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h1 id="基于Python-selenium实现自动填写表单"><a href="#基于Python-selenium实现自动填写表单" class="headerlink" title="基于Python+selenium实现自动填写表单"></a>基于Python+selenium实现自动填写表单</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>&emsp;&emsp;在实际工作中，经常会遇到这样的需求——将客户信息录入公司内部的后台管理系统。如果客户信息少的话，人工录入似乎也没什么问题。然而，当客户信息很多时，如果还是人工录入的话，显然耗时耗力，甚至会意外导致客户信息录入错误。<font color="red">为了避免繁琐、重复的操作步骤，同时避免不必要的错误，我们可以借助Python和selenium写一个自动化脚本来满足这一需求！</font></p>
+<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><blockquote>
+<ol>
+<li>安装Python语言（建议使用Anaconda方式进行安装，下面介绍基于此方式）；  </li>
+<li>安装selenium库，使用命令<code>pip install selenium</code>；  </li>
+<li>安装与浏览器版本相对应的浏览器驱动程序，以Google浏览器为例：<blockquote>
+<p>1） 查看浏览器版本号：打开Google浏览器，在地址栏输入<code>chrome://version/</code>，便可以查看到浏览器的版本号，下图中红色矩形框中的便是版本号：<br><img src="https://s1.imagehub.cc/images/2021/01/06/1.png" alt="浏览器版本号查看示例"><br>2） 下载Google浏览器对应版本的驱动程序，下载地址为<a target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html">https://chromedriver.storage.googleapis.com/index.html</a><br>3） 将下载的驱动文件解压，并将里面的<code>chromedriver.exe</code>程序放置到Anaconda安装目录的Scripts文件夹下，以笔者的为例：<code>D:\ProgramData\Anaconda3\Scripts</code></p>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><blockquote>
+<p>完成了工具准备以后，便可以开始使用代码实现需求了，以百度自动搜索selenium为例，请看示例代码：</p>
+</blockquote>
+<pre><code># encoding=utf8
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+import time
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+# 前台开启浏览器模式
+def openChrome():
+    # 加启动配置
+    option = webdriver.ChromeOptions()
+    option.add_argument(&#39;disable-infobars&#39;)
+    # 打开chrome浏览器
+    driver = webdriver.Chrome(chrome_options=option)
+    return driver
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+# 授权操作
+def operationAuth(driver):
+    url = &quot;http://www.baidu.com&quot;
+    driver.get(url)
+    # 找到输入框并输入查询内容
+    elem = driver.find_element_by_id(&quot;kw&quot;)
+    elem.send_keys(&quot;selenium&quot;)
+    # 提交表单
+    driver.find_element_by_xpath(&quot;//*[@id=&#39;su&#39;]&quot;).click()
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    print(&#39;查询操作完毕！&#39;)
+
+# 方法主入口
+if __name__ == &#39;__main__&#39;:
+    # 加启动配置
+    driver = openChrome()
+    operationAuth(driver)
+</code></pre>
+<blockquote>
+<p>一些命令的说明：</p>
+<blockquote>
+<p><code>driver.get(url)</code>：使用浏览器打开目标url；<br><code>driver.find_element_by_id(&quot;kw&quot;)</code>： 根据网页标签中HTML元素的id属性进行元素定位，本示例中定位的依据是百度搜索引擎搜索框的id，即字符串<code>kw</code>；<br><code>elem.send_keys(&quot;selenium&quot;)</code>： 向搜索框中填入搜索关键字<code>selenium</code>；<br><code>driver.find_element_by_xpath(&quot;//*[@id=&#39;su&#39;]&quot;).click()</code>： 一种新的定位元素的方式，基于xpath进行定位，这句代码前一部分是定位到了“百度一下”那个按钮，后一部分是点击操作，模拟用户的点击行为。<br><img src="https://s1.imagehub.cc/images/2021/01/06/8c13c9f03678de1f75ebdfd6aab246d4.png" alt="代码定位元素示例"><br><strong>说明：</strong>对于使用xpath方式定位，如何获取HTML元素的xpath问题，打开目标页面，按F12或右键—检查，然后用鼠标定位到目标元素，在浏览器的Elements视口中，右键目标元素—copy—copy-XPath便可以获取目标元素的XPath值。<br><img src="https://s1.imagehub.cc/images/2021/01/06/xpath.gif" alt="获取xpath教程.gif"></p>
+</blockquote>
+</blockquote>
 
                 
             </div>
@@ -503,7 +564,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chesssaint.github.io/2021/08/14/hello-world/">https://chesssaint.github.io/2021/08/14/hello-world/</a>
+                    <a href="https://chesssaint.github.io/2021/08/14/python+selenium%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E8%A1%A8%E5%8D%95/">https://chesssaint.github.io/2021/08/14/python+selenium%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E8%A1%A8%E5%8D%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,7 +601,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
+                                    <span class="chip bg-color">Web自动化</span>
+                                </a>
+                            
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/selenium/">
+                                    <span class="chip bg-color">selenium</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -708,9 +781,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/08/14/python+selenium%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E8%A1%A8%E5%8D%95/">
                     <div class="card-image">
@@ -728,9 +802,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -743,6 +817,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -769,13 +844,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/18/mongoDB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+                <a href="/2021/08/14/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Windows系统下mongoDB安装教程">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">Windows系统下mongoDB安装教程</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -786,35 +861,15 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/MongoDB/" class="post-category">
-                                    MongoDB
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            QishengXu
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/mongoDB/">
-                        <span class="chip bg-color">mongoDB</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">软件安装教程</span>
-                    </a>
-                    
                 </div>
                 
             </div>

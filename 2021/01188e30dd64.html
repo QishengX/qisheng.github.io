@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基于Python+selenium实现自动填写表单, github, Web, HTML,CSS,JavaScript">
+    <meta name="keywords" content="Windows系统下mongoDB安装教程, github, Web, HTML,CSS,JavaScript">
     <meta name="description" content="学习、记录、分享">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基于Python+selenium实现自动填写表单 | 徐齐胜的博客</title>
+    <title>Windows系统下mongoDB安装教程 | 徐齐胜的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基于Python+selenium实现自动填写表单</h1>
+                    <h1 class="description center-align post-title">Windows系统下mongoDB安装教程</h1>
                 </div>
             </div>
         </div>
@@ -431,16 +431,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                                <span class="chip bg-color">Web自动化</span>
+                            <a href="/tags/mongoDB/">
+                                <span class="chip bg-color">mongoDB</span>
                             </a>
                         
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
                             </a>
                         
-                            <a href="/tags/selenium/">
-                                <span class="chip bg-color">selenium</span>
+                            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">软件安装教程</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/" class="post-category">
-                                自动化
+                            <a href="/categories/MongoDB/" class="post-category">
+                                MongoDB
                             </a>
                         
                     </div>
@@ -464,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-14
+                    2021-01-18
                 </div>
                 
 
@@ -485,59 +485,45 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基于Python-selenium实现自动填写表单"><a href="#基于Python-selenium实现自动填写表单" class="headerlink" title="基于Python+selenium实现自动填写表单"></a>基于Python+selenium实现自动填写表单</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>&emsp;&emsp;在实际工作中，经常会遇到这样的需求——将客户信息录入公司内部的后台管理系统。如果客户信息少的话，人工录入似乎也没什么问题。然而，当客户信息很多时，如果还是人工录入的话，显然耗时耗力，甚至会意外导致客户信息录入错误。<font color="red">为了避免繁琐、重复的操作步骤，同时避免不必要的错误，我们可以借助Python和selenium写一个自动化脚本来满足这一需求！</font></p>
-<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><blockquote>
-<ol>
-<li>安装Python语言（建议使用Anaconda方式进行安装，下面介绍基于此方式）；  </li>
-<li>安装selenium库，使用命令<code>pip install selenium</code>；  </li>
-<li>安装与浏览器版本相对应的浏览器驱动程序，以Google浏览器为例：<blockquote>
-<p>1） 查看浏览器版本号：打开Google浏览器，在地址栏输入<code>chrome://version/</code>，便可以查看到浏览器的版本号，下图中红色矩形框中的便是版本号：<br><img src="https://s1.imagehub.cc/images/2021/01/06/1.png" alt="浏览器版本号查看示例"><br>2） 下载Google浏览器对应版本的驱动程序，下载地址为<a target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html">https://chromedriver.storage.googleapis.com/index.html</a><br>3） 将下载的驱动文件解压，并将里面的<code>chromedriver.exe</code>程序放置到Anaconda安装目录的Scripts文件夹下，以笔者的为例：<code>D:\ProgramData\Anaconda3\Scripts</code></p>
+                <h1 id="Windows系统下mongoDB安装教程"><a href="#Windows系统下mongoDB安装教程" class="headerlink" title="Windows系统下mongoDB安装教程"></a>Windows系统下mongoDB安装教程</h1><p>&emsp;&emsp;MongoDB是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。<br>&emsp;&emsp;MongoDB旨在为WEB应用提供可扩展的高性能数据存储解决方案。它将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB文档类似于JSON对象。字段值可以包含其他文档，数组及文档数组。</p>
+<h2 id="MongoDB下载"><a href="#MongoDB下载" class="headerlink" title="MongoDB下载"></a>MongoDB下载</h2><blockquote>
+<p>&emsp;&emsp;根据自己机器的配置选择合适的版本，从mongoDB官网下载安装包，下载地址为<a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/community?jmp=nav">https://www.mongodb.com/try/download/community?jmp=nav</a>。<br><img src="https://s1.imagehub.cc/images/2021/01/18/001.png" alt="下载界面"></p>
 </blockquote>
-</li>
+<h2 id="mongoDB安装"><a href="#mongoDB安装" class="headerlink" title="mongoDB安装"></a>mongoDB安装</h2><blockquote>
+<p>&emsp;&emsp;1. 官网下载得到MongoDB安装包.msi文件，双击文件启动安装向导，界面如图所示：<br><img src="https://s1.imagehub.cc/images/2021/01/18/1.png" alt="安装向导1"><br>&emsp;&emsp;2. 直接next；<br>&emsp;&emsp;3. 勾选接受协议，点击next；<br><img src="https://s1.imagehub.cc/images/2021/01/18/2.png" alt="安装向导2"><br>&emsp;&emsp;4. 选择自定义安装，如图红色箭头所示；<br><img src="https://s1.imagehub.cc/images/2021/01/18/3.png" alt="安装向导3"><br>&emsp;&emsp;5. 根据自己的情况选择是否更改安装路径；<br><img src="https://s1.imagehub.cc/images/2021/01/18/4.png" alt="安装向导4"><br>&emsp;&emsp;6. 从MongoDB 4.0开始，您可以在安装期间将MongoDB设置为服务，或者只安装二进制文件。</p>
+<blockquote>
+<h3 id="MongoDB服务"><a href="#MongoDB服务" class="headerlink" title="MongoDB服务"></a>MongoDB服务</h3><p>以下是安装和配置MongoDB作为服务。<br>从MongoDB 4.0开始，您可以在安装期间配置和启动MongoDB作为服务，并在成功安装后启动MongoDB服务。<br><img src="https://s1.imagehub.cc/images/2021/01/18/5.png" alt="安装向导5"><br>选择将MongoD安装为服务。<br>Run the service as Network Service user以网络服务用户身份运行服务（默认）,这是Windows内置的Windows用户帐户。<br>或者Run the service as a local or domain user以本地或域用户身份运行服务：  </p>
+<ul>
+<li>对于现有的本地用户帐户，请指定一个句点作为帐户域（即.），并为该用户指定帐户名称和帐户密码。</li>
+<li>对于现有域用户，请为该用户指定“帐户域”，“帐户名”和“帐户密码”。  </li>
+</ul>
+<p><strong>服务名称：</strong>指定服务名称。默认名称是MongoDB。如果您已拥有具有指定名称的服务，则必须选择另一个名称。<br><strong>数据目录：</strong>指定数据目录，对应于 –dbpath。如果该目录不存在，安装程序将创建该目录并设置对服务用户的目录访问权限。<br><strong>日志目录：</strong>指定日志目录，该目录对应于 –logpath。如果该目录不存在，安装程序将创建该目录并设置对服务用户的目录访问权限。</p>
+<h3 id="只安装MongoDB"><a href="#只安装MongoDB" class="headerlink" title="只安装MongoDB"></a>只安装MongoDB</h3><p>以下仅安装MongoDB，不将MongoDB配置为服务。<br>如果您选择不将MongoDB配置为服务，请取消选中Install MongoD as a Service。<br><img src="https://s1.imagehub.cc/images/2021/01/18/002.png" alt="002.png"></p>
+</blockquote>
+<p>&emsp;&emsp;7.安装MongoDB Compass(界面化数据库管理工具)。对于Windows 8或更高版本，您可以让向导安装 MongoDB Compass。要安装Compass，请选择Install MongoDB Compass（默认）。<br><img src="https://s1.imagehub.cc/images/2021/01/18/6.png" alt="6.png"><br>&emsp;&emsp;8.点击next，下面默认运行即可完成MongoDB。</p>
+</blockquote>
+<h2 id="MongoDB配置"><a href="#MongoDB配置" class="headerlink" title="MongoDB配置"></a>MongoDB配置</h2><blockquote>
+<ol>
+<li>创建C:\Program Files\MongoDB\data\log目录，用来存放日志文件；  </li>
+<li>在C:\Program Files\MongoDB\data\log目录里新建mongodb.log，用来存放日志信息；  </li>
+<li>创建C:\Program Files\MongoDB\data\db目录，用来存放数据库数据，</li>
+<li>并在D:\mongodb目录下创建mongo.config，在文件内部复制如下文本：</li>
 </ol>
 </blockquote>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><blockquote>
-<p>完成了工具准备以后，便可以开始使用代码实现需求了，以百度自动搜索selenium为例，请看示例代码：</p>
-</blockquote>
-<pre><code># encoding=utf8
-
-from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import time
-
-# 前台开启浏览器模式
-def openChrome():
-    # 加启动配置
-    option = webdriver.ChromeOptions()
-    option.add_argument(&#39;disable-infobars&#39;)
-    # 打开chrome浏览器
-    driver = webdriver.Chrome(chrome_options=option)
-    return driver
-
-# 授权操作
-def operationAuth(driver):
-    url = &quot;http://www.baidu.com&quot;
-    driver.get(url)
-    # 找到输入框并输入查询内容
-    elem = driver.find_element_by_id(&quot;kw&quot;)
-    elem.send_keys(&quot;selenium&quot;)
-    # 提交表单
-    driver.find_element_by_xpath(&quot;//*[@id=&#39;su&#39;]&quot;).click()
-
-    print(&#39;查询操作完毕！&#39;)
-
-# 方法主入口
-if __name__ == &#39;__main__&#39;:
-    # 加启动配置
-    driver = openChrome()
-    operationAuth(driver)
+<pre><code>##数据文件  此处=后对应到数据所存放的目录
+dbpath=C:\Program Files\MongoDB\data\db
+##日志文件  此处=后对应到日志文件所在路径
+logpath=C:\Program Files\MongoDB\data\log\mongodb.log
+##错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不是从新创建一个新文件
+logappend=true 
+#启用日志文件，默认启用
+journal=true 
+#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false
+quiet=true 
+#端口号 默认为27017
+port=27017 
 </code></pre>
-<blockquote>
-<p>一些命令的说明：</p>
-<blockquote>
-<p><code>driver.get(url)</code>：使用浏览器打开目标url；<br><code>driver.find_element_by_id(&quot;kw&quot;)</code>： 根据网页标签中HTML元素的id属性进行元素定位，本示例中定位的依据是百度搜索引擎搜索框的id，即字符串<code>kw</code>；<br><code>elem.send_keys(&quot;selenium&quot;)</code>： 向搜索框中填入搜索关键字<code>selenium</code>；<br><code>driver.find_element_by_xpath(&quot;//*[@id=&#39;su&#39;]&quot;).click()</code>： 一种新的定位元素的方式，基于xpath进行定位，这句代码前一部分是定位到了“百度一下”那个按钮，后一部分是点击操作，模拟用户的点击行为。<br><img src="https://s1.imagehub.cc/images/2021/01/06/8c13c9f03678de1f75ebdfd6aab246d4.png" alt="代码定位元素示例"><br><strong>说明：</strong>对于使用xpath方式定位，如何获取HTML元素的xpath问题，打开目标页面，按F12或右键—检查，然后用鼠标定位到目标元素，在浏览器的Elements视口中，右键目标元素—copy—copy-XPath便可以获取目标元素的XPath值。<br><img src="https://s1.imagehub.cc/images/2021/01/06/xpath.gif" alt="获取xpath教程.gif"></p>
-</blockquote>
-</blockquote>
+<h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><p>进入MongoDB安装目录的bin目录下，运行mongod.exe，如果闪一下退出就说明安装成功。在浏览器窗口输入<code>localhost:27017</code>，会出现下图：<br><img src="https://s1.imagehub.cc/images/2021/01/18/7.png" alt="7.png"></p>
 
                 
             </div>
@@ -564,7 +550,7 @@ if __name__ == &#39;__main__&#39;:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chesssaint.github.io/2021/08/14/python+selenium%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E8%A1%A8%E5%8D%95/">https://chesssaint.github.io/2021/08/14/python+selenium%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E8%A1%A8%E5%8D%95/</a>
+                    <a href="https://chesssaint.github.io/2021/01188e30dd64.html">https://chesssaint.github.io/2021/01188e30dd64.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -602,16 +588,16 @@ if __name__ == &#39;__main__&#39;:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                                    <span class="chip bg-color">Web自动化</span>
+                                <a href="/tags/mongoDB/">
+                                    <span class="chip bg-color">mongoDB</span>
                                 </a>
                             
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
-                                <a href="/tags/selenium/">
-                                    <span class="chip bg-color">selenium</span>
+                                <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">软件安装教程</span>
                                 </a>
                             
                         </div>
@@ -785,13 +771,13 @@ if __name__ == &#39;__main__&#39;:
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/08/14/Hexo%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/">
+                <a href="/2021/0814df93fdb0.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Hexo快速开始">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="基于Python+selenium实现自动填写表单">
                         
-                        <span class="card-title">Hexo快速开始</span>
+                        <span class="card-title">基于Python+selenium实现自动填写表单</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -808,8 +794,8 @@ if __name__ == &#39;__main__&#39;:
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/" class="post-category">
+                                    自动化
                                 </a>
                             
                             
@@ -819,8 +805,16 @@ if __name__ == &#39;__main__&#39;:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
+                        <span class="chip bg-color">Web自动化</span>
+                    </a>
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/selenium/">
+                        <span class="chip bg-color">selenium</span>
                     </a>
                     
                 </div>
@@ -834,13 +828,13 @@ if __name__ == &#39;__main__&#39;:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/18/mongoDB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+                <a href="/2020/12199f5fc182.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Windows系统下mongoDB安装教程">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="CSS动画之transform">
                         
-                        <span class="card-title">Windows系统下mongoDB安装教程</span>
+                        <span class="card-title">CSS动画之transform</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -851,14 +845,14 @@ if __name__ == &#39;__main__&#39;:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MongoDB/" class="post-category">
-                                    MongoDB
+                            <a href="/categories/CSS/" class="post-category">
+                                    CSS
                                 </a>
                             
                             
@@ -868,16 +862,12 @@ if __name__ == &#39;__main__&#39;:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mongoDB/">
-                        <span class="chip bg-color">mongoDB</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">软件安装教程</span>
+                    <a href="/tags/Web/">
+                        <span class="chip bg-color">Web</span>
                     </a>
                     
                 </div>

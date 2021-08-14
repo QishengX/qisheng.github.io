@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS动画之transform, github, Web, HTML,CSS,JavaScript">
+    <meta name="keywords" content="Markdown使用, github, Web, HTML,CSS,JavaScript">
     <meta name="description" content="学习、记录、分享">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS动画之transform | 徐齐胜的博客</title>
+    <title>Markdown使用 | 徐齐胜的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS动画之transform</h1>
+                    <h1 class="description center-align post-title">Markdown使用</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
                             </a>
                         
-                            <a href="/tags/Web/">
-                                <span class="chip bg-color">Web</span>
+                            <a href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">
+                                <span class="chip bg-color">文本编辑</span>
                             </a>
                         
                     </div>
@@ -447,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/CSS/" class="post-category">
-                                CSS
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
                             </a>
                         
                     </div>
@@ -460,7 +460,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-19
+                    2020-12-16
                 </div>
                 
 
@@ -481,367 +481,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="CSS动画之transform"><a href="#CSS动画之transform" class="headerlink" title="CSS动画之transform"></a>CSS动画之transform</h1><blockquote>
-<p>&emsp;&emsp;CSS 的 <code>transform</code> 属性用来给元素添加一些变形效果，主要包括改变元素的位置或形状，同时不影响页面的布局。使用 <code>transform</code> 我们可以实现一些非常炫酷的效果，比如纯CSS实现的钟表、立方体的旋转等，以提升用户体验。</p>
-</blockquote>
-<h2 id="平移translate"><a href="#平移translate" class="headerlink" title="平移translate"></a>平移translate</h2><blockquote>
-<p>&emsp;&emsp;使用平移 <code>translate</code> 可以改变元素的位置。<br><strong>可选值有：</strong></p>
-<blockquote>
-<p><code>translateX()</code>：元素沿着 x 轴方向平移；<br><code>translateY()</code>：元素沿着 y 轴方向平移；<br><code>translateZ()</code>：元素沿着 z 轴方向平移；<br>其中，平移的单位可以是像素值 px 或百分比。<font color=orange>需要注意的是如果设置百分比的话，元素的平移量是相对于元素自身尺寸进行的。</font></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>应用：</strong>使用平移效果可以实现在元素尺寸由内容撑开时元素的水平、垂直居中效果。<br><strong>语法</strong>：</p>
-<blockquote>
-<p>沿着 x 轴方向平移 <code>transform:translateX(平移量)</code>；<br>沿着 y 轴方向平移 <code>transform:translateY(平移量)</code>；<br>沿着 z 轴方向平移 <code>transform:translateZ(平移量)</code>；</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>实例1：</strong>元素沿着 x 轴从父元素的左侧平移到右侧。<br>效果为：<br><img src="https://s1.imagehub.cc/images/2020/12/19/translateX.gif" alt="平移实例效果图"><br>参考代码为：  </p>
-</blockquote>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;平移Translate实例&lt;/title&gt;
-    &lt;style&gt;
-        .box&#123;
-            width: 600px;
-            height: 320px;
-            margin: 50px auto;
-            border: 5px #333 solid;
-        &#125;
-        .box1&#123;
-            width: 200px;
-            height: 200px;
-            background: #bfa;
-            transition: .5s;
-        &#125;
-        .box:hover .box1&#123;
-            transform: translateX(400px);
-        &#125;
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;box&quot;&gt;
-        &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h2 id="旋转rotate"><a href="#旋转rotate" class="headerlink" title="旋转rotate"></a>旋转rotate</h2><blockquote>
-<p>&emsp;&emsp;使用旋转 <code>rotate</code> 可以改变元素的位置，可以调整元素的显示角度，以实现 3D 效果。<br><strong>可选值有：</strong></p>
-<blockquote>
-<p><code>rotateX()</code>：元素沿着 x 轴方向旋转；<br><code>rotateY()</code>：元素沿着 y 轴方向旋转；<br><code>rotateZ()</code>：元素沿着 z 轴方向旋转；<br>其中，旋转的单位可以是度 deg 或圈数 (turn)。当元素设置旋转效果时，是否显示元素的背面，可以使用 <code>backface-visibility</code> 来设置，可选值为 <code>hidden</code> 和 <code>visible</code>。<font color=orange>需要注意的是：每个元素自身都有一个坐标轴，一开始都处于默认状态，旋转会改变坐标轴x、y、z轴的方向。因此在与平移结合使用时需要特别注意。</font></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>应用：</strong>使用旋转效果可以实现模拟钟表等应用。<br><strong>语法</strong>：</p>
-<blockquote>
-<p>沿着 x 轴方向旋转 <code>transform:rotateX(旋转角度)</code>；<br>沿着 y 轴方向旋转 <code>transform:rotateY(旋转角度)</code>；<br>沿着 z 轴方向旋转 <code>transform:rotateZ(旋转角度)</code>；</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>实例2：</strong>元素沿着 z 轴旋转45度。<br>效果为：<br><img src="https://s1.imagehub.cc/images/2020/12/19/rotate.gif" alt="旋转效果图"><br>参考代码为：  </p>
-</blockquote>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;旋转rotate实例&lt;/title&gt;
-    &lt;style&gt;
-        .box&#123;
-            width: 600px;
-            height: 320px;
-            margin: 50px auto;
-            border: 5px #333 solid;
-            overflow: hidden;
-        &#125;
-        .box1&#123;
-            width: 200px;
-            height: 200px;
-            margin: 60px auto;
-            background: #bfa;
-            transition: .5s;
-        &#125;
-        .box:hover .box1&#123;
-            /* transform: rotateZ(45deg); */ /* 这两种设置方式都可以 */
-            transform: rotateZ(0.125turn);
-        &#125;
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;box&quot;&gt;
-        &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h2 id="缩放scale"><a href="#缩放scale" class="headerlink" title="缩放scale"></a>缩放scale</h2><blockquote>
-<p>&emsp;&emsp;使用缩放 <code>scale</code> 可以改变元素的形状尺寸。<br><strong>可选值有：</strong></p>
-<blockquote>
-<p><code>scaleX()</code>：元素沿着 x 轴方向缩放；<br><code>scaleY()</code>：元素沿着 y 轴方向缩放；<br><code>scale()</code>：元素沿着 x,y 轴双方向缩放；<br><code>scaleZ()</code>：元素沿着 z 轴方向缩放，但这个值用的比较少，如果用了的话要配合 3D 效果才能显示出效果；<br>其中，旋转的单位可以是度 deg 或圈数 (turn)。当元素设置旋转效果时，是否显示元素的背面，可以使用 <code>backface-visibility</code> 来设置，可选值为 <code>hidden</code> 和 <code>visible</code>。<font color=orange>需要注意的是：每个元素自身都有一个坐标轴，一开始都处于默认状态，旋转会改变坐标轴x、y、z轴的方向。因此在与平移结合使用时需要特别注意。</font></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>应用：</strong>使用旋转效果可以实现模拟钟表等应用。<br><strong>语法</strong>：</p>
-<blockquote>
-<p>沿着 x 轴方向缩放 <code>transform:scaleX(缩放比例)</code>；<br>沿着 y 轴方向缩放 <code>transform:scaleY(缩放比例)</code>；<br>沿着 x,y 轴双方向缩放 <code>transform:scale(缩放比例)</code>；</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>实例3：</strong>元素沿着 x 轴放大2倍。<br>效果为：<br><img src="https://s1.imagehub.cc/images/2020/12/19/scaleX.gif" alt="缩放效果图"><br>参考代码为：  </p>
-</blockquote>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;旋转rotate实例&lt;/title&gt;
-    &lt;style&gt;
-        .box&#123;
-            width: 600px;
-            height: 320px;
-            margin: 50px auto;
-            border: 5px #333 solid;
-            overflow: hidden;
-        &#125;
-        .box1&#123;
-            width: 200px;
-            height: 200px;
-            margin: 60px auto;
-            background: #bfa;
-            transition: .5s;
-        &#125;
-        .box:hover .box1&#123;
-            transform: scaleX(2)
-        &#125;
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;box&quot;&gt;
-        &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h2 id="transform参考原点"><a href="#transform参考原点" class="headerlink" title="transform参考原点"></a>transform参考原点</h2><blockquote>
-<p>&emsp;&emsp;变形效果的原点使用 <code>transform-origin</code> 来设置。默认情况下，变形效果的原点是元素的中心，也就是值为 <code>center</code>。<br><strong>可选值为：</strong></p>
-<blockquote>
-<p>center 默认值，变形效果参考原点为元素的中心；<br>使用方位词 <code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code> 及其组合，如果是单一方位词，则第二个值默认是center；<br>使用像素值指定；</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>语法：</strong> <code>transform-origin: value1 value2</code>。</p>
-</blockquote>
-<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><h3 id="练习1：使用旋转实现钟表。"><a href="#练习1：使用旋转实现钟表。" class="headerlink" title="练习1：使用旋转实现钟表。"></a>练习1：使用旋转实现钟表。</h3><p>&emsp;&emsp;最终效果为<br><img src="https://s1.imagehub.cc/images/2020/12/19/clock.gif" alt="钟表效果图"><br>&emsp;&emsp;练习图片资源<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/bg.png">下载</a><br>&emsp;&emsp;参考代码：</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;CSS Clock&lt;/title&gt;
-&lt;/head&gt;
-&lt;style&gt;
-    .clock &#123;
-        width: 400px;
-        height: 400px;
-        margin: 100px auto;
-        border-radius: 50%;
-        border: 5px #000 solid;
-        position: relative;
-        background-image: url(./img/img/13/bg.png);
-        background-size: cover;
-    &#125;
-
-    .hour-wrapper &#123;
-        width: 250px;
-        height: 250px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        animation: run 1440s infinite;
-    &#125;
-
-    .hour &#123;
-        width: 6px;
-        height: 50%;
-        background: rgb(15, 15, 15);
-        margin: 0 auto;
-    &#125;
-
-    .min-wrapper &#123;
-        width: 300px;
-        height: 300px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        animation: run 120s infinite;
-    &#125;
-
-    .min &#123;
-        width: 4px;
-        height: 50%;
-        background: rgb(37, 182, 102);
-        margin: 0 auto;
-    &#125;
-
-    .sec-wrapper &#123;
-        width: 350px;
-        height: 350px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        animation: run 2s infinite steps(60);
-    &#125;
-
-    .sec &#123;
-        width: 2px;
-        height: 50%;
-        background: rgb(122, 24, 202);
-        margin: 0 auto;
-    &#125;
-
-    @keyframes run &#123;
-        from&#123;
-            transform: rotateZ(0);
-        &#125;
-        to&#123;
-            transform: rotateZ(360deg);
-        &#125;
-    &#125;
-&lt;/style&gt;
-
-&lt;body&gt;
-    &lt;div class=&quot;clock&quot;&gt;
-        &lt;!-- 设置时针 --&gt;
-        &lt;div class=&quot;hour-wrapper&quot;&gt;
-            &lt;div class=&quot;hour&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!-- 设置分针 --&gt;
-        &lt;div class=&quot;min-wrapper&quot;&gt;
-            &lt;div class=&quot;min&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!-- 设置秒针 --&gt;
-        &lt;div class=&quot;sec-wrapper&quot;&gt;
-            &lt;div class=&quot;sec&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h3 id="练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。"><a href="#练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。" class="headerlink" title="练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。"></a>练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。</h3><p>&emsp;&emsp;最终效果为<br><img src="https://s1.imagehub.cc/images/2020/12/19/d3da0d250109aa354aae27a56914fc43.gif" alt="复仇者联盟立方体旋转效果图"><br>&emsp;&emsp;练习图片资源下载：  </p>
-<ul>
-<li>图片一： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/1.jpg">https://s1.imagehub.cc/images/2020/12/19/1.jpg</a>；  </li>
-<li>图片二： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/2.jpg">https://s1.imagehub.cc/images/2020/12/19/2.jpg</a>；  </li>
-<li>图片三： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/3.jpg">https://s1.imagehub.cc/images/2020/12/19/3.jpg</a>；  </li>
-<li>图片四： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/4.jpg">https://s1.imagehub.cc/images/2020/12/19/4.jpg</a>；  </li>
-<li>图片五： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/5.jpg">https://s1.imagehub.cc/images/2020/12/19/5.jpg</a>；  </li>
-<li>图片六： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/6.jpg">https://s1.imagehub.cc/images/2020/12/19/6.jpg</a>  </li>
+                <h1 id="Markdown使用"><a href="#Markdown使用" class="headerlink" title="Markdown使用"></a>Markdown使用</h1><h2 id="Markdown标题"><a href="#Markdown标题" class="headerlink" title="Markdown标题"></a>Markdown标题</h2><ul>
+<li>使用’ = ‘和’ - ‘标记一级标题和二级标题<h1 id="我展示的是一级标题（只要下方有一个等号即可）"><a href="#我展示的是一级标题（只要下方有一个等号即可）" class="headerlink" title="我展示的是一级标题（只要下方有一个等号即可）"></a>我展示的是一级标题（只要下方有一个等号即可）</h1></li>
 </ul>
-<p>&emsp;&emsp;参考代码：</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;立方体旋转&lt;/title&gt;
-    &lt;style&gt;
-        html &#123;
-            perspective: 800px;
-        &#125;
-
-        .cube &#123;
-            width: 200px;
-            height: 200px;
-            margin: 200px auto;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: rotate 2s linear infinite;
-        &#125;
-
-        .cube&gt;div &#123;
-            width: 200px;
-            height: 200px;
-            opacity: 0.7;
-            position: absolute;
-        &#125;
-
-        img &#123;
-            vertical-align: top;
-        &#125;
-
-        .box1 &#123;
-            transform: rotateY(90deg) translateZ(100px);
-        &#125;
-
-        .box2 &#123;
-            transform: rotateY(-90deg) translateZ(100px);
-        &#125;
-
-        .box3 &#123;
-            transform: rotateX(90deg) translateZ(100px);
-        &#125;
-
-        .box4 &#123;
-            transform: rotateX(-90deg) translateZ(100px);
-        &#125;
-
-        .box5 &#123;
-            transform: rotateY(180deg) translateZ(100px)
-        &#125;
-
-        .box6 &#123;
-            transform: rotateY(0deg) translateZ(100px);
-        &#125;
-        @keyframes rotate &#123;
-            form&#123;
-                transform:rotateX(0) rotateZ(0)
-            &#125;
-
-            to&#123;
-                transform:rotateX(1turn) rotateZ(1turn)
-            &#125;
-        &#125;
-    &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;div class=&quot;cube&quot;&gt;
-        &lt;div class=&quot;box1&quot;&gt;
-            &lt;img src=&quot;./img/img/14/1.jpg&quot; alt=&quot;&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;box2&quot;&gt;
-            &lt;img src=&quot;./img/img/14/2.jpg&quot; alt=&quot;&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;box3&quot;&gt;
-            &lt;img src=&quot;./img/img/14/3.jpg&quot; alt=&quot;&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;box4&quot;&gt;
-            &lt;img src=&quot;./img/img/14/4.jpg&quot; alt=&quot;&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;box5&quot;&gt;
-            &lt;img src=&quot;./img/img/14/5.jpg&quot; alt=&quot;&quot;&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;box6&quot;&gt;
-            &lt;img src=&quot;./img/img/14/6.jpg&quot; alt=&quot;&quot;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<h2 id="我展示的是二级标题"><a href="#我展示的是二级标题" class="headerlink" title="我展示的是二级标题"></a>我展示的是二级标题</h2><ul>
+<li>使用’ # ‘号的个数来标记标题的级别，有1~6这六个级别的标题，#个数越多，代表标题级别越低。</li>
+</ul>
+<h2 id="Markdown段落"><a href="#Markdown段落" class="headerlink" title="Markdown段落"></a>Markdown段落</h2><p>Markdown段落没有特殊的格式，直接编写文字就好。<br><strong>段落换行：</strong>使用两个以上的空格加回车，然后在该行输入文字，即可实现段落的换行。<br><font color=red>注意，这种做法是实现换行，两行之间并没有空一行；</font><br><strong>两行之间空一行：</strong>输入文字时在两行之间空一行。</p>
+<h2 id="Markdown字体"><a href="#Markdown字体" class="headerlink" title="Markdown字体"></a>Markdown字体</h2><ul>
+<li>斜体<ol>
+<li>使用两个星号*将文字包裹起来，可实现斜体；</li>
+<li>使用英文输入法的两个下划线_也可实现斜体；</li>
+</ol>
+</li>
+<li>文本加粗<ol>
+<li>左右均使用两个星号*包裹文字，可实现文字加粗效果；</li>
+<li>左右均使用英文输入法的两个下划线_也可实现文本的加粗效果。</li>
+</ol>
+</li>
+<li>粗斜体文本<ol>
+<li>左右各使用三个星号*将文字包裹，可实现粗斜体文本；</li>
+<li>左右各使用英文输入法的三个下划线_，也可实现粗斜体文本。<br><img src="https://s1.imagehub.cc/images/2020/12/16/149f065fc241fe142.png" alt="字体效果"></li>
+</ol>
+</li>
+</ul>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。<br><img src="https://s1.imagehub.cc/images/2020/12/16/2.png" alt="分割线效果"></p>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML 的 u 标签来实现：<br><img src="https://s1.imagehub.cc/images/2020/12/16/3.png" alt="下划线效果"></p>
+<h2 id="Markdown列表"><a href="#Markdown列表" class="headerlink" title="Markdown列表"></a>Markdown列表</h2><p>Markdown 支持有序列表和无序列表。  </p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>无序列表使用星号、加号或是减号作为列表标记，这些标记后面要添加一个空格，然后再填写内容：<br><img src="https://s1.imagehub.cc/images/2020/12/16/4.png" alt="无序列表效果"></p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>有序列表使用数字并加上 . 号来表示，如：<br><img src="https://s1.imagehub.cc/images/2020/12/16/5a94e9ca455f38b74.png" alt="有序列表效果"></p>
+<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>列表嵌套只需在子列表中的选项前面添加四个空格即可：<br><img src="https://s1.imagehub.cc/images/2020/12/16/6.png" alt="列表嵌套效果"></p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>使用HTML的del标签实现。<br><del>删除文字</del></p>
+<h2 id="Markdown区块"><a href="#Markdown区块" class="headerlink" title="Markdown区块"></a>Markdown区块</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号。<br><img src="https://s1.imagehub.cc/images/2020/12/16/7813e7c0a782e3937.png" alt="区块效果"><br>另外区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推。<br><img src="https://s1.imagehub.cc/images/2020/12/16/8.png" alt="区块嵌套效果"></p>
+<h2 id="区块中使用列表"><a href="#区块中使用列表" class="headerlink" title="区块中使用列表"></a>区块中使用列表</h2><p>具体用法见下面实例：<br><img src="https://s1.imagehub.cc/images/2020/12/16/9b3a394c0fe1c1c14.png" alt="区块中使用列表"></p>
+<h2 id="列表中使用区块"><a href="#列表中使用区块" class="headerlink" title="列表中使用区块"></a>列表中使用区块</h2><p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。区块中使用列表实例如下：<br><img src="https://s1.imagehub.cc/images/2020/12/16/10.png" alt="列表中使用区块"></p>
+<h2 id="Markdown代码"><a href="#Markdown代码" class="headerlink" title="Markdown代码"></a>Markdown代码</h2><ul>
+<li>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`）。</li>
+<li>代码区块：代码区块使用 4 个空格或者一个制表符（Tab 键）来包裹代码；也可以使用三对反引号来包裹代码块。</li>
+</ul>
+<h2 id="Markdown链接"><a href="#Markdown链接" class="headerlink" title="Markdown链接"></a>Markdown链接</h2><p>链接的使用方法为：<code>[链接名称](链接地址)</code>或<code>&lt;链接地址&gt;</code>，两个实例分别为：<br><a target="_blank" rel="noopener" href="https://qishengx.github.io/">徐齐胜的博客</a>、<a target="_blank" rel="noopener" href="https://qishengx.github.io/">https://qishengx.github.io/</a><br><strong>高级链接：</strong>通过变量来设置链接，变量赋值在文档末尾进行。一个实例为：<br><img src="https://s1.imagehub.cc/images/2020/12/16/11.png" alt="高级链接案例"></p>
+<h2 id="Markdown图片"><a href="#Markdown图片" class="headerlink" title="Markdown图片"></a>Markdown图片</h2><p>Markdown语法格式为：  </p>
+<ul>
+<li>开头一个感叹号 !;  </li>
+<li>接着一个方括号，里面放上图片的替代文字;  </li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。<br><img src="https://s1.imagehub.cc/images/2020/12/16/12.png" alt="Markdown图片语法"><br>当然，你也可以像网址那样对图片网址使用变量:<br><img src="https://s1.imagehub.cc/images/2020/12/16/13d6306a3946c9193b.png" alt="图片的高级用法"><br><font color=red>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <code>&lt;img&gt;</code> 标签。</font></li>
+</ul>
+<h2 id="Markdown表格"><a href="#Markdown表格" class="headerlink" title="Markdown表格"></a>Markdown表格</h2><blockquote>
+<p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：<br><img src="https://s1.imagehub.cc/images/2020/12/16/14.png" alt="Markdown表格语法规则"></p>
+<blockquote>
+<p>表格对齐方式<br>我们可以设置表格的对齐方式：<br>-: 设置内容和标题栏居右对齐。<br>:- 设置内容和标题栏居左对齐。<br>:-: 设置内容和标题栏居中对齐。<br>实例如下：<br><img src="https://s1.imagehub.cc/images/2020/12/16/15.png" alt="表格实例"></p>
+</blockquote>
+</blockquote>
+<h2 id="Markdown高级技巧"><a href="#Markdown高级技巧" class="headerlink" title="Markdown高级技巧"></a>Markdown高级技巧</h2><ul>
+<li>支持HTML元素：不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</li>
+<li>转义：Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠 \ 转义特殊字符。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>- [1] <a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
 
                 
             </div>
@@ -868,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chesssaint.github.io/2020/12/19/CSS%E5%8A%A8%E7%94%BB%E4%B9%8Btransform/">https://chesssaint.github.io/2020/12/19/CSS%E5%8A%A8%E7%94%BB%E4%B9%8Btransform/</a>
+                    <a href="https://chesssaint.github.io/2020/121628cddff3.html">https://chesssaint.github.io/2020/121628cddff3.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -906,12 +601,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
                                 </a>
                             
-                                <a href="/tags/Web/">
-                                    <span class="chip bg-color">Web</span>
+                                <a href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">
+                                    <span class="chip bg-color">文本编辑</span>
                                 </a>
                             
                         </div>
@@ -1085,64 +780,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/01/18/mongoDB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Windows系统下mongoDB安装教程">
-                        
-                        <span class="card-title">Windows系统下mongoDB安装教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/MongoDB/" class="post-category">
-                                    MongoDB
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/mongoDB/">
-                        <span class="chip bg-color">mongoDB</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">软件安装教程</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/12/18/CSS%E5%8A%A8%E7%94%BB%E4%B9%8Btransition&animation/">
+                <a href="/2020/1218c4a5188e.html">
                     <div class="card-image">
                         
                         
@@ -1158,9 +796,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1179,6 +817,55 @@
                     <a href="/tags/CSS/">
                         <span class="chip bg-color">CSS</span>
                     </a>
+                    
+                    <a href="/tags/Web/">
+                        <span class="chip bg-color">Web</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/1215dbc0e3b9.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="前端概述">
+                        
+                        <span class="card-title">前端概述</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Web/" class="post-category">
+                                    Web
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
                     
                     <a href="/tags/Web/">
                         <span class="chip bg-color">Web</span>

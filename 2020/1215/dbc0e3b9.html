@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基于Python+selenium实现自动填写表单, github, Web, HTML,CSS,JavaScript">
+    <meta name="keywords" content="前端概述, github, Web, HTML,CSS,JavaScript">
     <meta name="description" content="学习、记录、分享">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基于Python+selenium实现自动填写表单 | 徐齐胜的博客</title>
+    <title>前端概述 | 徐齐胜的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基于Python+selenium实现自动填写表单</h1>
+                    <h1 class="description center-align post-title">前端概述</h1>
                 </div>
             </div>
         </div>
@@ -431,16 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                                <span class="chip bg-color">Web自动化</span>
-                            </a>
-                        
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
-                            </a>
-                        
-                            <a href="/tags/selenium/">
-                                <span class="chip bg-color">selenium</span>
+                            <a href="/tags/Web/">
+                                <span class="chip bg-color">Web</span>
                             </a>
                         
                     </div>
@@ -451,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/" class="post-category">
-                                自动化
+                            <a href="/categories/Web/" class="post-category">
+                                Web
                             </a>
                         
                     </div>
@@ -464,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-14
+                    2020-12-15
                 </div>
                 
 
@@ -485,59 +477,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基于Python-selenium实现自动填写表单"><a href="#基于Python-selenium实现自动填写表单" class="headerlink" title="基于Python+selenium实现自动填写表单"></a>基于Python+selenium实现自动填写表单</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>&emsp;&emsp;在实际工作中，经常会遇到这样的需求——将客户信息录入公司内部的后台管理系统。如果客户信息少的话，人工录入似乎也没什么问题。然而，当客户信息很多时，如果还是人工录入的话，显然耗时耗力，甚至会意外导致客户信息录入错误。<font color="red">为了避免繁琐、重复的操作步骤，同时避免不必要的错误，我们可以借助Python和selenium写一个自动化脚本来满足这一需求！</font></p>
-<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><blockquote>
-<ol>
-<li>安装Python语言（建议使用Anaconda方式进行安装，下面介绍基于此方式）；  </li>
-<li>安装selenium库，使用命令<code>pip install selenium</code>；  </li>
-<li>安装与浏览器版本相对应的浏览器驱动程序，以Google浏览器为例：<blockquote>
-<p>1） 查看浏览器版本号：打开Google浏览器，在地址栏输入<code>chrome://version/</code>，便可以查看到浏览器的版本号，下图中红色矩形框中的便是版本号：<br><img src="https://s1.imagehub.cc/images/2021/01/06/1.png" alt="浏览器版本号查看示例"><br>2） 下载Google浏览器对应版本的驱动程序，下载地址为<a target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html">https://chromedriver.storage.googleapis.com/index.html</a><br>3） 将下载的驱动文件解压，并将里面的<code>chromedriver.exe</code>程序放置到Anaconda安装目录的Scripts文件夹下，以笔者的为例：<code>D:\ProgramData\Anaconda3\Scripts</code></p>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><blockquote>
-<p>完成了工具准备以后，便可以开始使用代码实现需求了，以百度自动搜索selenium为例，请看示例代码：</p>
-</blockquote>
-<pre><code># encoding=utf8
-
-from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import time
-
-# 前台开启浏览器模式
-def openChrome():
-    # 加启动配置
-    option = webdriver.ChromeOptions()
-    option.add_argument(&#39;disable-infobars&#39;)
-    # 打开chrome浏览器
-    driver = webdriver.Chrome(chrome_options=option)
-    return driver
-
-# 授权操作
-def operationAuth(driver):
-    url = &quot;http://www.baidu.com&quot;
-    driver.get(url)
-    # 找到输入框并输入查询内容
-    elem = driver.find_element_by_id(&quot;kw&quot;)
-    elem.send_keys(&quot;selenium&quot;)
-    # 提交表单
-    driver.find_element_by_xpath(&quot;//*[@id=&#39;su&#39;]&quot;).click()
-
-    print(&#39;查询操作完毕！&#39;)
-
-# 方法主入口
-if __name__ == &#39;__main__&#39;:
-    # 加启动配置
-    driver = openChrome()
-    operationAuth(driver)
-</code></pre>
-<blockquote>
-<p>一些命令的说明：</p>
-<blockquote>
-<p><code>driver.get(url)</code>：使用浏览器打开目标url；<br><code>driver.find_element_by_id(&quot;kw&quot;)</code>： 根据网页标签中HTML元素的id属性进行元素定位，本示例中定位的依据是百度搜索引擎搜索框的id，即字符串<code>kw</code>；<br><code>elem.send_keys(&quot;selenium&quot;)</code>： 向搜索框中填入搜索关键字<code>selenium</code>；<br><code>driver.find_element_by_xpath(&quot;//*[@id=&#39;su&#39;]&quot;).click()</code>： 一种新的定位元素的方式，基于xpath进行定位，这句代码前一部分是定位到了“百度一下”那个按钮，后一部分是点击操作，模拟用户的点击行为。<br><img src="https://s1.imagehub.cc/images/2021/01/06/8c13c9f03678de1f75ebdfd6aab246d4.png" alt="代码定位元素示例"><br><strong>说明：</strong>对于使用xpath方式定位，如何获取HTML元素的xpath问题，打开目标页面，按F12或右键—检查，然后用鼠标定位到目标元素，在浏览器的Elements视口中，右键目标元素—copy—copy-XPath便可以获取目标元素的XPath值。<br><img src="https://s1.imagehub.cc/images/2021/01/06/xpath.gif" alt="获取xpath教程.gif"></p>
-</blockquote>
-</blockquote>
+                <h2 id="网站逻辑介绍"><a href="#网站逻辑介绍" class="headerlink" title="网站逻辑介绍"></a>网站逻辑介绍</h2><p>前端分为客户端与服务器。其中，客户端是通过浏览器解析前端工程师所写的网页源码来实现（我们日常的上网所浏览的网页都是基于这个逻辑的），服务器主要处理前端的请求并返回结果响应。<br>前端页面所涉及的核心技术为HTML（超文本标记语言）、CSS（层叠样式表）和JavaScript。其中，HTML是网页骨架，CSS控制网页的显示样式，JavaScript控制网页的行为（这三种技术一般称为“结构—样式—行为”）。</p>
+<h2 id="前端学习路线"><a href="#前端学习路线" class="headerlink" title="前端学习路线"></a>前端学习路线</h2><p>学习Web开发一般可以按照先学HTML，然后学习CSS，最后再学Javascript这样的顺序进行。当然，需要注意的是，初学阶段，在学习HTML时，主要以对各个标签熟悉为主。对于暂时理解不了的知识不要过于纠结，随着学习的深入这些疑问才能慢慢理解，比如HTML表单，在没有学习JavaScript以及后端的知识时，很难完全理解表单的运行逻辑；在学习CSS时，同样是以熟悉各个CSS熟悉为主，不必要求一下子要记住所有的属性，但务必要将各个属性的原理理解清楚，比如外边距折叠、高度塌陷等问题是怎么产生的；到了学习JavaScript时，不仅要学习它的理论知识，还要勤于动手，在练习实践中学习、理解知识。  </p>
+<p>最后，在学习这三部分内容时，一定要耐下心来，把每个知识点都过一遍，多多练习。这三部分知识是整个网页前端的基础和核心。</p>
 
                 
             </div>
@@ -564,7 +506,7 @@ if __name__ == &#39;__main__&#39;:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chesssaint.github.io/2021/0814df93fdb0.html">https://chesssaint.github.io/2021/0814df93fdb0.html</a>
+                    <a href="https://chesssaint.github.io/2020/1215/dbc0e3b9.html">https://chesssaint.github.io/2020/1215/dbc0e3b9.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -602,16 +544,8 @@ if __name__ == &#39;__main__&#39;:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                                    <span class="chip bg-color">Web自动化</span>
-                                </a>
-                            
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
-                                </a>
-                            
-                                <a href="/tags/selenium/">
-                                    <span class="chip bg-color">selenium</span>
+                                <a href="/tags/Web/">
+                                    <span class="chip bg-color">Web</span>
                                 </a>
                             
                         </div>
@@ -785,13 +719,13 @@ if __name__ == &#39;__main__&#39;:
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/0814ebeb7b66.html">
+                <a href="/2020/1216/28cddff3.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Hexo快速开始">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Markdown使用">
                         
-                        <span class="card-title">Hexo快速开始</span>
+                        <span class="card-title">Markdown使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -802,14 +736,14 @@ if __name__ == &#39;__main__&#39;:
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
                                 </a>
                             
                             
@@ -819,8 +753,12 @@ if __name__ == &#39;__main__&#39;:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">
+                        <span class="chip bg-color">文本编辑</span>
                     </a>
                     
                 </div>
@@ -831,16 +769,16 @@ if __name__ == &#39;__main__&#39;:
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/01188e30dd64.html">
+                <a href="/2020/1215/dbc0e3b9.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Windows系统下mongoDB安装教程">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="前端概述">
                         
-                        <span class="card-title">Windows系统下mongoDB安装教程</span>
+                        <span class="card-title">前端概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -851,33 +789,26 @@ if __name__ == &#39;__main__&#39;:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MongoDB/" class="post-category">
-                                    MongoDB
+                            <a href="/categories/Web/" class="post-category">
+                                    Web
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mongoDB/">
-                        <span class="chip bg-color">mongoDB</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">软件安装教程</span>
+                    <a href="/tags/Web/">
+                        <span class="chip bg-color">Web</span>
                     </a>
                     
                 </div>

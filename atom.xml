@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>徐齐胜的博客</title>
+  
+  <subtitle>清风徐来</subtitle>
+  <link href="https://chesssaint.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://chesssaint.github.io/"/>
+  <updated>2021-08-14T08:53:09.417Z</updated>
+  <id>https://chesssaint.github.io/</id>
+  
+  <author>
+    <name>QishengXu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo快速开始</title>
+    <link href="https://chesssaint.github.io/2021/0814/ebeb7b66.html"/>
+    <id>https://chesssaint.github.io/2021/0814/ebeb7b66.html</id>
+    <published>2021-08-14T04:50:00.000Z</published>
+    <updated>2021-08-14T08:53:09.417Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://chesssaint.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Hexo" scheme="https://chesssaint.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Python+selenium实现自动填写表单</title>
+    <link href="https://chesssaint.github.io/2021/0814/df93fdb0.html"/>
+    <id>https://chesssaint.github.io/2021/0814/df93fdb0.html</id>
+    <published>2021-08-14T04:48:33.402Z</published>
+    <updated>2021-01-06T10:40:51.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;基于Python-selenium实现自动填写表单&quot;&gt;&lt;a href=&quot;#基于Python-selenium实现自动填写表单&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自动化" scheme="https://chesssaint.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+    <category term="Web自动化" scheme="https://chesssaint.github.io/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    <category term="Python" scheme="https://chesssaint.github.io/tags/Python/"/>
+    
+    <category term="selenium" scheme="https://chesssaint.github.io/tags/selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows系统下mongoDB安装教程</title>
+    <link href="https://chesssaint.github.io/2021/0118/8e30dd64.html"/>
+    <id>https://chesssaint.github.io/2021/0118/8e30dd64.html</id>
+    <published>2021-01-18T10:40:00.000Z</published>
+    <updated>2021-08-13T13:02:24.671Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Windows系统下mongoDB安装教程&quot;&gt;&lt;a href=&quot;#Windows系统下mongoDB安装教程&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="MongoDB" scheme="https://chesssaint.github.io/categories/MongoDB/"/>
+    
+    
+    <category term="mongoDB" scheme="https://chesssaint.github.io/tags/mongoDB/"/>
+    
+    <category term="数据库" scheme="https://chesssaint.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="软件安装教程" scheme="https://chesssaint.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS动画之transform</title>
+    <link href="https://chesssaint.github.io/2020/1219/9f5fc182.html"/>
+    <id>https://chesssaint.github.io/2020/1219/9f5fc182.html</id>
+    <published>2020-12-19T04:50:00.000Z</published>
+    <updated>2020-12-19T06:41:19.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSS动画之transform&quot;&gt;&lt;a href=&quot;#CSS动画之transform&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="https://chesssaint.github.io/categories/CSS/"/>
+    
+    
+    <category term="CSS" scheme="https://chesssaint.github.io/tags/CSS/"/>
+    
+    <category term="Web" scheme="https://chesssaint.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS动画效果之transition、animation</title>
+    <link href="https://chesssaint.github.io/2020/1218/c4a5188e.html"/>
+    <id>https://chesssaint.github.io/2020/1218/c4a5188e.html</id>
+    <published>2020-12-18T03:01:00.000Z</published>
+    <updated>2020-12-19T06:11:25.413Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSS动画效果之transition、animation&quot;&gt;&lt;a href=&quot;#CSS动画效果之transition、animation&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="https://chesssaint.github.io/categories/CSS/"/>
+    
+    
+    <category term="CSS" scheme="https://chesssaint.github.io/tags/CSS/"/>
+    
+    <category term="Web" scheme="https://chesssaint.github.io/tags/Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown使用</title>
+    <link href="https://chesssaint.github.io/2020/1216/28cddff3.html"/>
+    <id>https://chesssaint.github.io/2020/1216/28cddff3.html</id>
+    <published>2020-12-16T13:40:00.000Z</published>
+    <updated>2020-12-17T03:41:27.016Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Markdown使用&quot;&gt;&lt;a href=&quot;#Markdown使用&quot; class=&quot;headerlink&quot; title=&quot;Markdown使用&quot;&gt;&lt;/a&gt;Markdown使用&lt;/h1&gt;&lt;h2 id=&quot;Markdown标题&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="https://chesssaint.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Markdown" scheme="https://chesssaint.github.io/tags/Markdown/"/>
+    
+    <category term="文本编辑" scheme="https://chesssaint.github.io/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端概述</title>
+    <link href="https://chesssaint.github.io/2020/1215/dbc0e3b9.html"/>
+    <id>https://chesssaint.github.io/2020/1215/dbc0e3b9.html</id>
+    <published>2020-12-15T13:40:00.000Z</published>
+    <updated>2020-12-17T03:41:27.013Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;网站逻辑介绍&quot;&gt;&lt;a href=&quot;#网站逻辑介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web" scheme="https://chesssaint.github.io/categories/Web/"/>
+    
+    
+    <category term="Web" scheme="https://chesssaint.github.io/tags/Web/"/>
+    
+  </entry>
+  
+</feed>

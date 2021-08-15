@@ -3,11 +3,11 @@
   <title>徐齐胜的博客</title>
   
   <subtitle>清风徐来</subtitle>
-  <link href="https://chesssaint.github.io/atom.xml" rel="self"/>
+  <link href="https://blog.xuqisheng.top/atom.xml" rel="self"/>
   
-  <link href="https://chesssaint.github.io/"/>
+  <link href="https://blog.xuqisheng.top/"/>
   <updated>2021-08-14T08:53:09.417Z</updated>
-  <id>https://chesssaint.github.io/</id>
+  <id>https://blog.xuqisheng.top/</id>
   
   <author>
     <name>QishengXu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo快速开始</title>
-    <link href="https://chesssaint.github.io/2021/0814/ebeb7b66.html"/>
-    <id>https://chesssaint.github.io/2021/0814/ebeb7b66.html</id>
+    <link href="https://blog.xuqisheng.top/2021/0814/ebeb7b66.html"/>
+    <id>https://blog.xuqisheng.top/2021/0814/ebeb7b66.html</id>
     <published>2021-08-14T04:50:00.000Z</published>
     <updated>2021-08-14T08:53:09.417Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="教程" scheme="https://chesssaint.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://blog.xuqisheng.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Hexo" scheme="https://chesssaint.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://blog.xuqisheng.top/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>基于Python+selenium实现自动填写表单</title>
-    <link href="https://chesssaint.github.io/2021/0814/df93fdb0.html"/>
-    <id>https://chesssaint.github.io/2021/0814/df93fdb0.html</id>
+    <link href="https://blog.xuqisheng.top/2021/0814/df93fdb0.html"/>
+    <id>https://blog.xuqisheng.top/2021/0814/df93fdb0.html</id>
     <published>2021-08-14T04:48:33.402Z</published>
     <updated>2021-01-06T10:40:51.323Z</updated>
     
@@ -59,21 +59,21 @@
     
     
     
-    <category term="自动化" scheme="https://chesssaint.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    <category term="自动化" scheme="https://blog.xuqisheng.top/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
     
-    <category term="Web自动化" scheme="https://chesssaint.github.io/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    <category term="Web自动化" scheme="https://blog.xuqisheng.top/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
-    <category term="Python" scheme="https://chesssaint.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog.xuqisheng.top/tags/Python/"/>
     
-    <category term="selenium" scheme="https://chesssaint.github.io/tags/selenium/"/>
+    <category term="selenium" scheme="https://blog.xuqisheng.top/tags/selenium/"/>
     
   </entry>
   
   <entry>
     <title>Windows系统下mongoDB安装教程</title>
-    <link href="https://chesssaint.github.io/2021/0118/8e30dd64.html"/>
-    <id>https://chesssaint.github.io/2021/0118/8e30dd64.html</id>
+    <link href="https://blog.xuqisheng.top/2021/0118/8e30dd64.html"/>
+    <id>https://blog.xuqisheng.top/2021/0118/8e30dd64.html</id>
     <published>2021-01-18T10:40:00.000Z</published>
     <updated>2021-08-13T13:02:24.671Z</updated>
     
@@ -88,21 +88,21 @@
     
     
     
-    <category term="MongoDB" scheme="https://chesssaint.github.io/categories/MongoDB/"/>
+    <category term="MongoDB" scheme="https://blog.xuqisheng.top/categories/MongoDB/"/>
     
     
-    <category term="mongoDB" scheme="https://chesssaint.github.io/tags/mongoDB/"/>
+    <category term="mongoDB" scheme="https://blog.xuqisheng.top/tags/mongoDB/"/>
     
-    <category term="数据库" scheme="https://chesssaint.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://blog.xuqisheng.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="软件安装教程" scheme="https://chesssaint.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <category term="软件安装教程" scheme="https://blog.xuqisheng.top/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>CSS动画之transform</title>
-    <link href="https://chesssaint.github.io/2020/1219/9f5fc182.html"/>
-    <id>https://chesssaint.github.io/2020/1219/9f5fc182.html</id>
+    <link href="https://blog.xuqisheng.top/2020/1219/9f5fc182.html"/>
+    <id>https://blog.xuqisheng.top/2020/1219/9f5fc182.html</id>
     <published>2020-12-19T04:50:00.000Z</published>
     <updated>2020-12-19T06:41:19.258Z</updated>
     
@@ -117,19 +117,19 @@
     
     
     
-    <category term="CSS" scheme="https://chesssaint.github.io/categories/CSS/"/>
+    <category term="CSS" scheme="https://blog.xuqisheng.top/categories/CSS/"/>
     
     
-    <category term="CSS" scheme="https://chesssaint.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="https://blog.xuqisheng.top/tags/CSS/"/>
     
-    <category term="Web" scheme="https://chesssaint.github.io/tags/Web/"/>
+    <category term="Web" scheme="https://blog.xuqisheng.top/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>CSS动画效果之transition、animation</title>
-    <link href="https://chesssaint.github.io/2020/1218/c4a5188e.html"/>
-    <id>https://chesssaint.github.io/2020/1218/c4a5188e.html</id>
+    <link href="https://blog.xuqisheng.top/2020/1218/c4a5188e.html"/>
+    <id>https://blog.xuqisheng.top/2020/1218/c4a5188e.html</id>
     <published>2020-12-18T03:01:00.000Z</published>
     <updated>2020-12-19T06:11:25.413Z</updated>
     
@@ -144,19 +144,19 @@
     
     
     
-    <category term="CSS" scheme="https://chesssaint.github.io/categories/CSS/"/>
+    <category term="CSS" scheme="https://blog.xuqisheng.top/categories/CSS/"/>
     
     
-    <category term="CSS" scheme="https://chesssaint.github.io/tags/CSS/"/>
+    <category term="CSS" scheme="https://blog.xuqisheng.top/tags/CSS/"/>
     
-    <category term="Web" scheme="https://chesssaint.github.io/tags/Web/"/>
+    <category term="Web" scheme="https://blog.xuqisheng.top/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>Markdown使用</title>
-    <link href="https://chesssaint.github.io/2020/1216/28cddff3.html"/>
-    <id>https://chesssaint.github.io/2020/1216/28cddff3.html</id>
+    <link href="https://blog.xuqisheng.top/2020/1216/28cddff3.html"/>
+    <id>https://blog.xuqisheng.top/2020/1216/28cddff3.html</id>
     <published>2020-12-16T13:40:00.000Z</published>
     <updated>2020-12-17T03:41:27.016Z</updated>
     
@@ -171,19 +171,19 @@
     
     
     
-    <category term="Markdown" scheme="https://chesssaint.github.io/categories/Markdown/"/>
+    <category term="Markdown" scheme="https://blog.xuqisheng.top/categories/Markdown/"/>
     
     
-    <category term="Markdown" scheme="https://chesssaint.github.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://blog.xuqisheng.top/tags/Markdown/"/>
     
-    <category term="文本编辑" scheme="https://chesssaint.github.io/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/"/>
+    <category term="文本编辑" scheme="https://blog.xuqisheng.top/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/"/>
     
   </entry>
   
   <entry>
     <title>前端概述</title>
-    <link href="https://chesssaint.github.io/2020/1215/dbc0e3b9.html"/>
-    <id>https://chesssaint.github.io/2020/1215/dbc0e3b9.html</id>
+    <link href="https://blog.xuqisheng.top/2020/1215/dbc0e3b9.html"/>
+    <id>https://blog.xuqisheng.top/2020/1215/dbc0e3b9.html</id>
     <published>2020-12-15T13:40:00.000Z</published>
     <updated>2020-12-17T03:41:27.013Z</updated>
     
@@ -198,10 +198,10 @@
     
     
     
-    <category term="Web" scheme="https://chesssaint.github.io/categories/Web/"/>
+    <category term="Web" scheme="https://blog.xuqisheng.top/categories/Web/"/>
     
     
-    <category term="Web" scheme="https://chesssaint.github.io/tags/Web/"/>
+    <category term="Web" scheme="https://blog.xuqisheng.top/tags/Web/"/>
     
   </entry>
   

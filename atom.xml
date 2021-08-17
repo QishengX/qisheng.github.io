@@ -6,7 +6,7 @@
   <link href="https://blog.xuqisheng.top/atom.xml" rel="self"/>
   
   <link href="https://blog.xuqisheng.top/"/>
-  <updated>2021-08-14T08:53:09.417Z</updated>
+  <updated>2021-08-17T05:20:06.466Z</updated>
   <id>https://blog.xuqisheng.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Python+selenium实现自动填写表单</title>
+    <link href="https://blog.xuqisheng.top/2021/0817/df93fdb0.html"/>
+    <id>https://blog.xuqisheng.top/2021/0817/df93fdb0.html</id>
+    <published>2021-08-17T05:16:24.000Z</published>
+    <updated>2021-08-17T05:20:06.466Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;基于Python-selenium实现自动填写表单&quot;&gt;&lt;a href=&quot;#基于Python-selenium实现自动填写表单&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自动化" scheme="https://blog.xuqisheng.top/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    
+    <category term="Web自动化" scheme="https://blog.xuqisheng.top/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    <category term="Python" scheme="https://blog.xuqisheng.top/tags/Python/"/>
+    
+    <category term="selenium" scheme="https://blog.xuqisheng.top/tags/selenium/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo快速开始</title>

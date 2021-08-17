@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="基于Python+selenium实现自动填写表单, github, Web, HTML,CSS,JavaScript">
+    <meta name="keywords" content="matery主题常用编程语言代码块规范, github, Web, HTML,CSS,JavaScript">
     <meta name="description" content="学习、记录、分享">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -32,7 +32,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基于Python+selenium实现自动填写表单 | chessSaint</title>
+    <title>matery主题常用编程语言代码块规范 | chessSaint</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -327,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基于Python+selenium实现自动填写表单</h1>
+                    <h1 class="description center-align post-title">matery主题常用编程语言代码块规范</h1>
                 </div>
             </div>
         </div>
@@ -448,16 +448,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                                <span class="chip bg-color">Web自动化</span>
-                            </a>
-                        
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
-                            </a>
-                        
-                            <a href="/tags/selenium/">
-                                <span class="chip bg-color">selenium</span>
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
                             </a>
                         
                     </div>
@@ -468,8 +460,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/" class="post-category">
-                                自动化
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                教程
+                            </a>
+                        
+                            <a href="/categories/%E6%95%99%E7%A8%8B/Markdown/" class="post-category">
+                                Markdown
                             </a>
                         
                     </div>
@@ -495,14 +491,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    572
+                    279
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -522,21 +518,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基于Python-selenium实现自动填写表单"><a href="#基于Python-selenium实现自动填写表单" class="headerlink" title="基于Python+selenium实现自动填写表单"></a>基于Python+selenium实现自动填写表单</h1><h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>&emsp;&emsp;在实际工作中，经常会遇到这样的需求——将客户信息录入公司内部的后台管理系统。如果客户信息少的话，人工录入似乎也没什么问题。然而，当客户信息很多时，如果还是人工录入的话，显然耗时耗力，甚至会意外导致客户信息录入错误。<font color="red">为了避免繁琐、重复的操作步骤，同时避免不必要的错误，我们可以借助Python和selenium写一个自动化脚本来满足这一需求！</font></p>
-<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><blockquote>
-<ol>
-<li>安装Python语言（建议使用Anaconda方式进行安装，下面介绍基于此方式）；  </li>
-<li>安装selenium库，使用命令<code>pip install selenium</code>；  </li>
-<li>安装与浏览器版本相对应的浏览器驱动程序，以Google浏览器为例：<blockquote>
-<p>1） 查看浏览器版本号：打开Google浏览器，在地址栏输入<code>chrome://version/</code>，便可以查看到浏览器的版本号，下图中红色矩形框中的便是版本号：<br><img src="https://s1.imagehub.cc/images/2021/01/06/1.png" alt="浏览器版本号查看示例"><br>2） 下载Google浏览器对应版本的驱动程序，下载地址为<a target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html">https://chromedriver.storage.googleapis.com/index.html</a><br>3） 将下载的驱动文件解压，并将里面的<code>chromedriver.exe</code>程序放置到Anaconda安装目录的Scripts文件夹下，以笔者的为例：<code>D:\ProgramData\Anaconda3\Scripts</code></p>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><blockquote>
-<p>完成了工具准备以后，便可以开始使用代码实现需求了，以百度自动搜索selenium为例，请看示例代码：</p>
-</blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># encoding=utf8</span>
+                <h1 id="python代码"><a href="#python代码" class="headerlink" title="python代码"></a>python代码</h1><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># encoding=utf8</span>
 
 <span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
 <span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>desired_capabilities <span class="token keyword">import</span> DesiredCapabilities
@@ -581,6 +563,31 @@
         <span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">700</span>px<span class="token punctuation">;</span>
     &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
 &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+</code></pre>
+<h1 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h1><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token number">.</span>rabbit&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">132</span>px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">271</span>px<span class="token punctuation">;</span>
+            <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">50</span>px auto<span class="token punctuation">;</span>
+            <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(./img/img/11/bigtap-mitu-queue-big.png)</span><span class="token punctuation">;</span>
+            <span class="token property">background-position</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token property">transition</span><span class="token punctuation">:</span> all <span class="token function">steps</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token number">0.2</span>s<span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+        <span class="token number">.</span><span class="token property">rabbit</span><span class="token punctuation">:</span>hover&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+            <span class="token property">background-position</span><span class="token punctuation">:</span> -<span class="token number">396</span>px <span class="token number">0</span><span class="token punctuation">;</span>
+        &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>rabbit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre>
 
                 
@@ -646,16 +653,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                                    <span class="chip bg-color">Web自动化</span>
-                                </a>
-                            
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
-                                </a>
-                            
-                                <a href="/tags/selenium/">
-                                    <span class="chip bg-color">selenium</span>
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
                                 </a>
                             
                         </div>
@@ -861,9 +860,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="基于Python+selenium实现自动填写表单">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="matery主题常用编程语言代码块规范">
                         
-                        <span class="card-title">基于Python+selenium实现自动填写表单</span>
+                        <span class="card-title">matery主题常用编程语言代码块规范</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -880,8 +879,12 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/" class="post-category">
-                                    自动化
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/Markdown/" class="post-category">
+                                    Markdown
                                 </a>
                             
                             
@@ -892,16 +895,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/">
-                        <span class="chip bg-color">Web自动化</span>
-                    </a>
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/selenium/">
-                        <span class="chip bg-color">selenium</span>
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
                     </a>
                     
                 </div>

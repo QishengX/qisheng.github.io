@@ -6,7 +6,7 @@
   <link href="https://blog.xuqisheng.top/atom.xml" rel="self"/>
   
   <link href="https://blog.xuqisheng.top/"/>
-  <updated>2021-08-17T07:17:18.559Z</updated>
+  <updated>2021-08-17T08:07:53.021Z</updated>
   <id>https://blog.xuqisheng.top/</id>
   
   <author>
@@ -17,31 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>基于Python+selenium实现自动填写表单</title>
+    <title>matery主题常用编程语言代码块规范</title>
     <link href="https://blog.xuqisheng.top/2021/0817/df93fdb0.html"/>
     <id>https://blog.xuqisheng.top/2021/0817/df93fdb0.html</id>
     <published>2021-08-17T05:16:24.000Z</published>
-    <updated>2021-08-17T07:17:18.559Z</updated>
+    <updated>2021-08-17T08:07:53.021Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;基于Python-selenium实现自动填写表单&quot;&gt;&lt;a href=&quot;#基于Python-selenium实现自动填写表单&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;python代码&quot;&gt;&lt;a href=&quot;#python代码&quot; class=&quot;headerlink&quot; title=&quot;python代码&quot;&gt;&lt;/a&gt;python代码&lt;/h1&gt;&lt;pre class=&quot; language-python&quot;&gt;&lt;code</summary>
         
       
     
     
     
-    <category term="自动化" scheme="https://blog.xuqisheng.top/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    <category term="教程" scheme="https://blog.xuqisheng.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Markdown" scheme="https://blog.xuqisheng.top/categories/%E6%95%99%E7%A8%8B/Markdown/"/>
     
     
-    <category term="Web自动化" scheme="https://blog.xuqisheng.top/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
-    <category term="Python" scheme="https://blog.xuqisheng.top/tags/Python/"/>
-    
-    <category term="selenium" scheme="https://blog.xuqisheng.top/tags/selenium/"/>
+    <category term="Markdown" scheme="https://blog.xuqisheng.top/tags/Markdown/"/>
     
   </entry>
   

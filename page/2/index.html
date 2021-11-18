@@ -1,1005 +1,679 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-
-
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="github, Web, HTML,CSS,JavaScript">
-    <meta name="description" content="学习、记录、分享">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-
-    <title>chessSaint</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-
-    <script src="/libs/jquery/jquery.min.js"></script>
-
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="chessSaint" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-
-
-
-
-<body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">chessSaint</span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>chessSaint</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="chessSaint"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="chessSaint"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="学习、记录、分享"><meta property="og:type" content="blog"><meta property="og:title" content="辣椒の酱"><meta property="og:url" content="https://removeif.github.io/"><meta property="og:site_name" content="辣椒の酱"><meta property="og:description" content="学习、记录、分享"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:author" content="removeif"><meta property="article:tag" content="github, Web, HTML,CSS,JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.xuqisheng.top"},"headline":"chessSaint","image":["https://blog.xuqisheng.top/img/og_image.png"],"author":{"@type":"Person","name":"QishengXu"},"description":"学习、记录、分享"}</script><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="chessSaint" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="chessSaint" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-01-18  <a class="commentCountImg" href="/2021/0118/8e30dd64.html#comment-container"><span class="display-none-class">f0f36306a1ce9aff24c63aa723ca2f26</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f0f36306a1ce9aff24c63aa723ca2f26">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>8 分钟  <i class="fas fa-pencil-alt"> </i>1.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/0118/8e30dd64.html">Windows系统下mongoDB安装教程</a></h1><div class="content"><h1 id="Windows系统下mongoDB安装教程"><a href="#Windows系统下mongoDB安装教程" class="headerlink" title="Windows系统下mongoDB安装教程"></a>Windows系统下mongoDB安装教程</h1><p>&emsp;&emsp;MongoDB是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。<br>&emsp;&emsp;MongoDB旨在为WEB应用提供可扩展的高性能数据存储解决方案。它将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB文档类似于JSON对象。字段值可以包含其他文档，数组及文档数组。</p>
+<h2 id="MongoDB下载"><a href="#MongoDB下载" class="headerlink" title="MongoDB下载"></a>MongoDB下载</h2><blockquote>
+<p>&emsp;&emsp;根据自己机器的配置选择合适的版本，从mongoDB官网下载安装包，下载地址为<a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/community?jmp=nav">https://www.mongodb.com/try/download/community?jmp=nav</a>。<br><img src="https://s1.imagehub.cc/images/2021/01/18/001.png" alt="下载界面"></p>
+</blockquote>
+<h2 id="mongoDB安装"><a href="#mongoDB安装" class="headerlink" title="mongoDB安装"></a>mongoDB安装</h2><blockquote>
+<p>&emsp;&emsp;1. 官网下载得到MongoDB安装包.msi文件，双击文件启动安装向导，界面如图所示：<br><img src="https://s1.imagehub.cc/images/2021/01/18/1.png" alt="安装向导1"><br>&emsp;&emsp;2. 直接next；<br>&emsp;&emsp;3. 勾选接受协议，点击next；<br><img src="https://s1.imagehub.cc/images/2021/01/18/2.png" alt="安装向导2"><br>&emsp;&emsp;4. 选择自定义安装，如图红色箭头所示；<br><img src="https://s1.imagehub.cc/images/2021/01/18/3.png" alt="安装向导3"><br>&emsp;&emsp;5. 根据自己的情况选择是否更改安装路径；<br><img src="https://s1.imagehub.cc/images/2021/01/18/4.png" alt="安装向导4"><br>&emsp;&emsp;6. 从MongoDB 4.0开始，您可以在安装期间将MongoDB设置为服务，或者只安装二进制文件。</p>
+<blockquote>
+<h3 id="MongoDB服务"><a href="#MongoDB服务" class="headerlink" title="MongoDB服务"></a>MongoDB服务</h3><p>以下是安装和配置MongoDB作为服务。<br>从MongoDB 4.0开始，您可以在安装期间配置和启动MongoDB作为服务，并在成功安装后启动MongoDB服务。<br><img src="https://s1.imagehub.cc/images/2021/01/18/5.png" alt="安装向导5"><br>选择将MongoD安装为服务。<br>Run the service as Network Service user以网络服务用户身份运行服务（默认）,这是Windows内置的Windows用户帐户。<br>或者Run the service as a local or domain user以本地或域用户身份运行服务：  </p>
+<ul>
+<li>对于现有的本地用户帐户，请指定一个句点作为帐户域（即.），并为该用户指定帐户名称和帐户密码。</li>
+<li>对于现有域用户，请为该用户指定“帐户域”，“帐户名”和“帐户密码”。  </li>
 </ul>
+<p><strong>服务名称：</strong>指定服务名称。默认名称是MongoDB。如果您已拥有具有指定名称的服务，则必须选择另一个名称。<br><strong>数据目录：</strong>指定数据目录，对应于 –dbpath。如果该目录不存在，安装程序将创建该目录并设置对服务用户的目录访问权限。<br><strong>日志目录：</strong>指定日志目录，该目录对应于 –logpath。如果该目录不存在，安装程序将创建该目录并设置对服务用户的目录访问权限。</p>
+<h3 id="只安装MongoDB"><a href="#只安装MongoDB" class="headerlink" title="只安装MongoDB"></a>只安装MongoDB</h3><p>以下仅安装MongoDB，不将MongoDB配置为服务。<br>如果您选择不将MongoDB配置为服务，请取消选中Install MongoD as a Service。<br><img src="https://s1.imagehub.cc/images/2021/01/18/002.png" alt="002.png"></p>
+</blockquote>
+<p>&emsp;&emsp;7.安装MongoDB Compass(界面化数据库管理工具)。对于Windows 8或更高版本，您可以让向导安装 MongoDB Compass。要安装Compass，请选择Install MongoDB Compass（默认）。<br><img src="https://s1.imagehub.cc/images/2021/01/18/6.png" alt="6.png"><br>&emsp;&emsp;8.点击next，下面默认运行即可完成MongoDB。</p>
+</blockquote>
+<h2 id="MongoDB配置"><a href="#MongoDB配置" class="headerlink" title="MongoDB配置"></a>MongoDB配置</h2><blockquote>
+<ol>
+<li>创建C:\Program Files\MongoDB\data\log目录，用来存放日志文件；  </li>
+<li>在C:\Program Files\MongoDB\data\log目录里新建mongodb.log，用来存放日志信息；  </li>
+<li>创建C:\Program Files\MongoDB\data\db目录，用来存放数据库数据，</li>
+<li>并在D:\mongodb目录下创建mongo.config，在文件内部复制如下文本：</li>
+</ol>
+</blockquote>
+<pre><code>##数据文件  此处=后对应到数据所存放的目录
+dbpath=C:\Program Files\MongoDB\data\db
+##日志文件  此处=后对应到日志文件所在路径
+logpath=C:\Program Files\MongoDB\data\log\mongodb.log
+##错误日志采用追加模式，配置这个选项后mongodb的日志会追加到现有的日志文件，而不是从新创建一个新文件
+logappend=true 
+#启用日志文件，默认启用
+journal=true 
+#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false
+quiet=true 
+#端口号 默认为27017
+port=27017 
+</code></pre>
+<h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><p>进入MongoDB安装目录的bin目录下，运行mongod.exe，如果闪一下退出就说明安装成功。在浏览器窗口输入<code>localhost:27017</code>，会出现下图：<br><img src="https://s1.imagehub.cc/images/2021/01/18/7.png" alt="7.png"></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/MongoDB/">MongoDB</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/mongoDB/">mongoDB</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">软件安装教程</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2020-12-19  <a class="commentCountImg" href="/2020/1219/9f5fc182.html#comment-container"><span class="display-none-class">eac46ee84669491ab8acde8c4552d85b</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="eac46ee84669491ab8acde8c4552d85b">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>11 分钟  <i class="fas fa-pencil-alt"> </i>1.6 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/1219/9f5fc182.html">CSS动画之transform</a></h1><div class="content"><h1 id="CSS动画之transform"><a href="#CSS动画之transform" class="headerlink" title="CSS动画之transform"></a>CSS动画之transform</h1><blockquote>
+<p>&emsp;&emsp;CSS 的 <code>transform</code> 属性用来给元素添加一些变形效果，主要包括改变元素的位置或形状，同时不影响页面的布局。使用 <code>transform</code> 我们可以实现一些非常炫酷的效果，比如纯CSS实现的钟表、立方体的旋转等，以提升用户体验。</p>
+</blockquote>
+<h2 id="平移translate"><a href="#平移translate" class="headerlink" title="平移translate"></a>平移translate</h2><blockquote>
+<p>&emsp;&emsp;使用平移 <code>translate</code> 可以改变元素的位置。<br><strong>可选值有：</strong></p>
+<blockquote>
+<p><code>translateX()</code>：元素沿着 x 轴方向平移；<br><code>translateY()</code>：元素沿着 y 轴方向平移；<br><code>translateZ()</code>：元素沿着 z 轴方向平移；<br>其中，平移的单位可以是像素值 px 或百分比。<font color=orange>需要注意的是如果设置百分比的话，元素的平移量是相对于元素自身尺寸进行的。</font></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>应用：</strong>使用平移效果可以实现在元素尺寸由内容撑开时元素的水平、垂直居中效果。<br><strong>语法</strong>：</p>
+<blockquote>
+<p>沿着 x 轴方向平移 <code>transform:translateX(平移量)</code>；<br>沿着 y 轴方向平移 <code>transform:translateY(平移量)</code>；<br>沿着 z 轴方向平移 <code>transform:translateZ(平移量)</code>；</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>实例1：</strong>元素沿着 x 轴从父元素的左侧平移到右侧。<br>效果为：<br><img src="https://s1.imagehub.cc/images/2020/12/19/translateX.gif" alt="平移实例效果图"><br>参考代码为：  </p>
+</blockquote>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;平移Translate实例&lt;/title&gt;
+    &lt;style&gt;
+        .box&#123;
+            width: 600px;
+            height: 320px;
+            margin: 50px auto;
+            border: 5px #333 solid;
+        &#125;
+        .box1&#123;
+            width: 200px;
+            height: 200px;
+            background: #bfa;
+            transition: .5s;
+        &#125;
+        .box:hover .box1&#123;
+            transform: translateX(400px);
+        &#125;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="旋转rotate"><a href="#旋转rotate" class="headerlink" title="旋转rotate"></a>旋转rotate</h2><blockquote>
+<p>&emsp;&emsp;使用旋转 <code>rotate</code> 可以改变元素的位置，可以调整元素的显示角度，以实现 3D 效果。<br><strong>可选值有：</strong></p>
+<blockquote>
+<p><code>rotateX()</code>：元素沿着 x 轴方向旋转；<br><code>rotateY()</code>：元素沿着 y 轴方向旋转；<br><code>rotateZ()</code>：元素沿着 z 轴方向旋转；<br>其中，旋转的单位可以是度 deg 或圈数 (turn)。当元素设置旋转效果时，是否显示元素的背面，可以使用 <code>backface-visibility</code> 来设置，可选值为 <code>hidden</code> 和 <code>visible</code>。<font color=orange>需要注意的是：每个元素自身都有一个坐标轴，一开始都处于默认状态，旋转会改变坐标轴x、y、z轴的方向。因此在与平移结合使用时需要特别注意。</font></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>应用：</strong>使用旋转效果可以实现模拟钟表等应用。<br><strong>语法</strong>：</p>
+<blockquote>
+<p>沿着 x 轴方向旋转 <code>transform:rotateX(旋转角度)</code>；<br>沿着 y 轴方向旋转 <code>transform:rotateY(旋转角度)</code>；<br>沿着 z 轴方向旋转 <code>transform:rotateZ(旋转角度)</code>；</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>实例2：</strong>元素沿着 z 轴旋转45度。<br>效果为：<br><img src="https://s1.imagehub.cc/images/2020/12/19/rotate.gif" alt="旋转效果图"><br>参考代码为：  </p>
+</blockquote>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;旋转rotate实例&lt;/title&gt;
+    &lt;style&gt;
+        .box&#123;
+            width: 600px;
+            height: 320px;
+            margin: 50px auto;
+            border: 5px #333 solid;
+            overflow: hidden;
+        &#125;
+        .box1&#123;
+            width: 200px;
+            height: 200px;
+            margin: 60px auto;
+            background: #bfa;
+            transition: .5s;
+        &#125;
+        .box:hover .box1&#123;
+            /* transform: rotateZ(45deg); */ /* 这两种设置方式都可以 */
+            transform: rotateZ(0.125turn);
+        &#125;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="缩放scale"><a href="#缩放scale" class="headerlink" title="缩放scale"></a>缩放scale</h2><blockquote>
+<p>&emsp;&emsp;使用缩放 <code>scale</code> 可以改变元素的形状尺寸。<br><strong>可选值有：</strong></p>
+<blockquote>
+<p><code>scaleX()</code>：元素沿着 x 轴方向缩放；<br><code>scaleY()</code>：元素沿着 y 轴方向缩放；<br><code>scale()</code>：元素沿着 x,y 轴双方向缩放；<br><code>scaleZ()</code>：元素沿着 z 轴方向缩放，但这个值用的比较少，如果用了的话要配合 3D 效果才能显示出效果；<br>其中，旋转的单位可以是度 deg 或圈数 (turn)。当元素设置旋转效果时，是否显示元素的背面，可以使用 <code>backface-visibility</code> 来设置，可选值为 <code>hidden</code> 和 <code>visible</code>。<font color=orange>需要注意的是：每个元素自身都有一个坐标轴，一开始都处于默认状态，旋转会改变坐标轴x、y、z轴的方向。因此在与平移结合使用时需要特别注意。</font></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>应用：</strong>使用旋转效果可以实现模拟钟表等应用。<br><strong>语法</strong>：</p>
+<blockquote>
+<p>沿着 x 轴方向缩放 <code>transform:scaleX(缩放比例)</code>；<br>沿着 y 轴方向缩放 <code>transform:scaleY(缩放比例)</code>；<br>沿着 x,y 轴双方向缩放 <code>transform:scale(缩放比例)</code>；</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>实例3：</strong>元素沿着 x 轴放大2倍。<br>效果为：<br><img src="https://s1.imagehub.cc/images/2020/12/19/scaleX.gif" alt="缩放效果图"><br>参考代码为：  </p>
+</blockquote>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;旋转rotate实例&lt;/title&gt;
+    &lt;style&gt;
+        .box&#123;
+            width: 600px;
+            height: 320px;
+            margin: 50px auto;
+            border: 5px #333 solid;
+            overflow: hidden;
+        &#125;
+        .box1&#123;
+            width: 200px;
+            height: 200px;
+            margin: 60px auto;
+            background: #bfa;
+            transition: .5s;
+        &#125;
+        .box:hover .box1&#123;
+            transform: scaleX(2)
+        &#125;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="transform参考原点"><a href="#transform参考原点" class="headerlink" title="transform参考原点"></a>transform参考原点</h2><blockquote>
+<p>&emsp;&emsp;变形效果的原点使用 <code>transform-origin</code> 来设置。默认情况下，变形效果的原点是元素的中心，也就是值为 <code>center</code>。<br><strong>可选值为：</strong></p>
+<blockquote>
+<p>center 默认值，变形效果参考原点为元素的中心；<br>使用方位词 <code>left</code>、<code>right</code>、<code>top</code>、<code>bottom</code> 及其组合，如果是单一方位词，则第二个值默认是center；<br>使用像素值指定；</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>语法：</strong> <code>transform-origin: value1 value2</code>。</p>
+</blockquote>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><h3 id="练习1：使用旋转实现钟表。"><a href="#练习1：使用旋转实现钟表。" class="headerlink" title="练习1：使用旋转实现钟表。"></a>练习1：使用旋转实现钟表。</h3><p>&emsp;&emsp;最终效果为<br><img src="https://s1.imagehub.cc/images/2020/12/19/clock.gif" alt="钟表效果图"><br>&emsp;&emsp;练习图片资源<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/bg.png">下载</a><br>&emsp;&emsp;参考代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
 
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;CSS Clock&lt;/title&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    .clock &#123;
+        width: 400px;
+        height: 400px;
+        margin: 100px auto;
+        border-radius: 50%;
+        border: 5px #000 solid;
+        position: relative;
+        background-image: url(./img/img/13/bg.png);
+        background-size: cover;
+    &#125;
 
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">chessSaint</div>
-        <div class="logo-desc">
-            
-            学习、记录、分享
-            
-        </div>
-    </div>
-
-    
-
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/chessSaint/chessSaint.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
-            </a>
-        </li>
-        
-    </ul>
-</div>
-
-
-        </div>
-
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
+    .hour-wrapper &#123;
+        width: 250px;
+        height: 250px;
         position: absolute;
-        z-index: 10;
-        top: 0;
+        left: 0;
         right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        animation: run 1440s infinite;
+    &#125;
 
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
+    .hour &#123;
+        width: 6px;
+        height: 50%;
+        background: rgb(15, 15, 15);
+        margin: 0 auto;
+    &#125;
 
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
+    .min-wrapper &#123;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        animation: run 120s infinite;
+    &#125;
 
-    .github-corner .octo-arm {
-        animation: none;
-    }
+    .min &#123;
+        width: 4px;
+        height: 50%;
+        background: rgb(37, 182, 102);
+        margin: 0 auto;
+    &#125;
 
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
+    .sec-wrapper &#123;
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        animation: run 2s infinite steps(60);
+    &#125;
 
-<a href="https://github.com/chessSaint/chessSaint.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
-        
-    </nav>
+    .sec &#123;
+        width: 2px;
+        height: 50%;
+        background: rgb(122, 24, 202);
+        margin: 0 auto;
+    &#125;
 
-</header>
+    @keyframes run &#123;
+        from&#123;
+            transform: rotateZ(0);
+        &#125;
+        to&#123;
+            transform: rotateZ(360deg);
+        &#125;
+    &#125;
+&lt;/style&gt;
 
-    
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                清风徐来
-                
-            </div>
+&lt;body&gt;
+    &lt;div class=&quot;clock&quot;&gt;
+        &lt;!-- 设置时针 --&gt;
+        &lt;div class=&quot;hour-wrapper&quot;&gt;
+            &lt;div class=&quot;hour&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- 设置分针 --&gt;
+        &lt;div class=&quot;min-wrapper&quot;&gt;
+            &lt;div class=&quot;min&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- 设置秒针 --&gt;
+        &lt;div class=&quot;sec-wrapper&quot;&gt;
+            &lt;div class=&quot;sec&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。"><a href="#练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。" class="headerlink" title="练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。"></a>练习2：使用6张复仇者联盟图片构建一个立方体，并实现立方体的旋转。</h3><p>&emsp;&emsp;最终效果为<br><img src="https://s1.imagehub.cc/images/2020/12/19/d3da0d250109aa354aae27a56914fc43.gif" alt="复仇者联盟立方体旋转效果图"><br>&emsp;&emsp;练习图片资源下载：  </p>
+<ul>
+<li>图片一： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/1.jpg">https://s1.imagehub.cc/images/2020/12/19/1.jpg</a>；  </li>
+<li>图片二： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/2.jpg">https://s1.imagehub.cc/images/2020/12/19/2.jpg</a>；  </li>
+<li>图片三： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/3.jpg">https://s1.imagehub.cc/images/2020/12/19/3.jpg</a>；  </li>
+<li>图片四： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/4.jpg">https://s1.imagehub.cc/images/2020/12/19/4.jpg</a>；  </li>
+<li>图片五： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/5.jpg">https://s1.imagehub.cc/images/2020/12/19/5.jpg</a>；  </li>
+<li>图片六： <a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/19/6.jpg">https://s1.imagehub.cc/images/2020/12/19/6.jpg</a>  </li>
+</ul>
+<p>&emsp;&emsp;参考代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;立方体旋转&lt;/title&gt;
+    &lt;style&gt;
+        html &#123;
+            perspective: 800px;
+        &#125;
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
+        .cube &#123;
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 2s linear infinite;
+        &#125;
 
+        .cube&gt;div &#123;
+            width: 200px;
+            height: 200px;
+            opacity: 0.7;
+            position: absolute;
+        &#125;
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
+        img &#123;
+            vertical-align: top;
+        &#125;
 
+        .box1 &#123;
+            transform: rotateY(90deg) translateZ(100px);
+        &#125;
 
-    </div>
-</div>
+        .box2 &#123;
+            transform: rotateY(-90deg) translateZ(100px);
+        &#125;
 
+        .box3 &#123;
+            transform: rotateX(90deg) translateZ(100px);
+        &#125;
 
-<main class="content">
+        .box4 &#123;
+            transform: rotateX(-90deg) translateZ(100px);
+        &#125;
 
-    
+        .box5 &#123;
+            transform: rotateY(180deg) translateZ(100px)
+        &#125;
 
-    
+        .box6 &#123;
+            transform: rotateY(0deg) translateZ(100px);
+        &#125;
+        @keyframes rotate &#123;
+            form&#123;
+                transform:rotateX(0) rotateZ(0)
+            &#125;
 
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/0118/8e30dd64.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Windows系统下mongoDB安装教程">
-                            
-                            <span class="card-title">Windows系统下mongoDB安装教程</span>
-                        </div>
-                    </a>
+            to&#123;
+                transform:rotateX(1turn) rotateZ(1turn)
+            &#125;
+        &#125;
+    &lt;/style&gt;
+&lt;/head&gt;
 
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Windows系统下mongoDB安装教程&emsp;&emsp;MongoDB是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。&emsp;&emsp;MongoDB旨在
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/MongoDB/" class="post-category">
-                                    MongoDB
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/mongoDB/">
-                            <span class="chip bg-color">mongoDB</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                            <span class="chip bg-color">数据库</span>
-                        </a>
-                        
-                        <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
-                            <span class="chip bg-color">软件安装教程</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/1219/9f5fc182.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="CSS动画之transform">
-                            
-                            <span class="card-title">CSS动画之transform</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                CSS动画之transform
-&emsp;&emsp;CSS 的 transform 属性用来给元素添加一些变形效果，主要包括改变元素的位置或形状，同时不影响页面的布局。使用 transform 我们可以实现一些非常炫酷的效果，比如纯CS
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-19
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CSS/" class="post-category">
-                                    CSS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/CSS/">
-                            <span class="chip bg-color">CSS</span>
-                        </a>
-                        
-                        <a href="/tags/Web/">
-                            <span class="chip bg-color">Web</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/1218/c4a5188e.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="CSS动画效果之transition、animation">
-                            
-                            <span class="card-title">CSS动画效果之transition、animation</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                CSS动画效果之transition、animation过渡效果transition
-&emsp;&emsp;过渡（transition）效果指的是CSS属性从一个值变到另一个值时的切换方式，使用过渡可以创建一些非常好的效果，提升用户的体验
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/CSS/" class="post-category">
-                                    CSS
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/CSS/">
-                            <span class="chip bg-color">CSS</span>
-                        </a>
-                        
-                        <a href="/tags/Web/">
-                            <span class="chip bg-color">Web</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/1216/28cddff3.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Markdown使用">
-                            
-                            <span class="card-title">Markdown使用</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Markdown使用Markdown标题
-使用’ = ‘和’ - ‘标记一级标题和二级标题我展示的是一级标题（只要下方有一个等号即可）
-
-我展示的是二级标题
-使用’ # ‘号的个数来标记标题的级别，有1~6这六个级别的标题，#个数越多，代表
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Markdown/">
-                            <span class="chip bg-color">Markdown</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">
-                            <span class="chip bg-color">文本编辑</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/1215/dbc0e3b9.html">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="前端概述">
-                            
-                            <span class="card-title">前端概述</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                网站逻辑介绍前端分为客户端与服务器。其中，客户端是通过浏览器解析前端工程师所写的网页源码来实现（我们日常的上网所浏览的网页都是基于这个逻辑的），服务器主要处理前端的请求并返回结果响应。前端页面所涉及的核心技术为HTML（超文本标记语言）、C
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-15
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Web/" class="post-category">
-                                    Web
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Web/">
-                            <span class="chip bg-color">Web</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
-
-</main>
-
-
-<div class="container paging">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            
-            <a href="/"
-               class="left btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 2</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a class="right btn-floating btn-large disabled">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
-        </div>
-    </div>
-</div>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2020-2021</span>
-            
-            <span id="year">2020</span>
-            <a href="/about" target="_blank">QishengXu</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2020";
-                    var startMonth = "12";
-                    var startDate = "15";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
+&lt;body&gt;
+    &lt;div class=&quot;cube&quot;&gt;
+        &lt;div class=&quot;box1&quot;&gt;
+            &lt;img src=&quot;./img/img/14/1.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;box2&quot;&gt;
+            &lt;img src=&quot;./img/img/14/2.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;box3&quot;&gt;
+            &lt;img src=&quot;./img/img/14/3.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;box4&quot;&gt;
+            &lt;img src=&quot;./img/img/14/4.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;box5&quot;&gt;
+            &lt;img src=&quot;./img/img/14/5.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;box6&quot;&gt;
+            &lt;img src=&quot;./img/img/14/6.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/CSS/">CSS</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/CSS/">CSS</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/Web/">Web</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2020-12-18  <a class="commentCountImg" href="/2020/1218/c4a5188e.html#comment-container"><span class="display-none-class">f8ccdf3fd0521ef06ad906160916fd18</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f8ccdf3fd0521ef06ad906160916fd18">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.6 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/1218/c4a5188e.html">CSS动画效果之transition、animation</a></h1><div class="content"><h1 id="CSS动画效果之transition、animation"><a href="#CSS动画效果之transition、animation" class="headerlink" title="CSS动画效果之transition、animation"></a>CSS动画效果之transition、animation</h1><h2 id="过渡效果transition"><a href="#过渡效果transition" class="headerlink" title="过渡效果transition"></a>过渡效果transition</h2><blockquote>
+<p>&emsp;&emsp;<strong>过渡（transition）</strong>效果指的是CSS属性从一个值变到另一个值时的切换方式，使用过渡可以创建一些非常好的效果，提升用户的体验。<br>&emsp;&emsp;<strong>过渡效果设置步骤：</strong><br>&emsp;&emsp;1、在想加过渡效果的元素中设置过渡的起点和过渡效果的实现方式；<br>&emsp;&emsp;2、在触发过渡行为时设置过渡的终点。<br>&emsp;&emsp;<strong>设置过渡效果的属性：</strong>  </p>
+<blockquote>
+<ul>
+<li><strong>transition-property：</strong>指定要执行过渡的属性，多个属性之间用英文逗号分隔。在CSS中，绝大多数属性都是可以设置过渡效果的（实际上可以理解为只要能设置具体数值的属性都可以设置过渡效果）。如果所有属性都要设置过渡效果，则可以使用关键字<code>all</code>。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>transition-duration：</strong>指定过渡效果执行的时间，时间单位可以是秒（s）或毫秒（ms）。其中，<code>1s = 1000ms</code>。</li>
+<li><strong>transition-timing-function：</strong>设置过渡效果执行的时序函数，也就是设置过渡效果的执行方式。<blockquote>
+<blockquote>
+<p>可选值有：<br>1、 <code>ease</code>：默认值，过渡效果慢速开始，即先加速，再减速；<br>2、 <code>linear</code>：线性执行，即过渡效果匀速运动；<br>3、 <code>ease-in</code>：过渡效果加速运动；<br>4、 <code>ease-out</code>：过渡效果减速运动；<br>5、 <code>ease-in-out</code>：过渡效果先加速后减速；<br>6、 <code>cubic-bezier()</code>：使用贝塞尔曲线设置过渡方式，值的设定请查阅<a target="_blank" rel="noopener" href="https://cubic-bezier.com/">https://cubic-bezier.com</a>；<br>7、 <code>steps(step, end/start)</code>：分布执行过渡效果，将过渡效果从时间上划分为<code>transition-duration / step</code>这几个时间间隔。其中，第一个值是过渡的步数，第二个值可以是 end 或 start，end 是默认值。第二个值设为end表示分步过渡效果在时间间隔结束时执行；如果设置为start，则表示过渡效果在时间间隔刚开始时就执行。例如，transition-duration为2s，steps(2,end)，表示的是在总共分两步完成过渡，第一步在1s刚结束时发生，第二步在2s刚结束时发生；start则相反。  </p>
+</blockquote>
+</blockquote>
+</li>
+<li><strong>transition-delay：</strong>设置过渡效果在触发时，还要延迟多久再发生。 </li>
+</ul>
+<p><strong>过渡效果的简写属性：</strong><code>transition</code> 是过渡效果的简写属性，上面的所有属性都可以简写在该属性中，属性之间用空格隔开即可，并且属性之间无顺序要求，只要注意如果要设置过渡延迟效果的话，则延迟时间是第二个时间。</p>
+</blockquote>
+<h2 id="动画animation"><a href="#动画animation" class="headerlink" title="动画animation"></a>动画animation</h2><blockquote>
+<p>&emsp;&emsp;<strong>动画（animation）</strong>和过渡十分相似，不同的是在默认情况下它不需要指定触发行为就可以发生。<br>&emsp;&emsp;<strong>动画的使用步骤：</strong></p>
+</blockquote>
+<ol>
+<li><p>设置动画关键帧；</p>
+</li>
+<li><p>在需要添加动画的元素中设置动画。<br>&emsp;&emsp;<strong>关键帧</strong>设置语法：<code>使用keyframes</code>关键字设置,<code>name</code>是动画名字。  </p>
+<p> @keyframes name {</p>
+<pre><code> /* from表示动画的开始位置（状态） 也可以使用 0% */
+ from&#123;
+     margin-left: 0;
+     background-color: orange;
+ &#125; 
+ /* to动画的结束位置（状态） 也可以使用100%*/
+ to&#123;
+     background-color: red;
+     margin-left: 700px;
+ &#125;
+</code></pre>
+<p> }</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>动画animation的详细属性：</strong></p>
+<blockquote>
+<ul>
+<li><strong>animation-name：</strong>要设置的动画的名字，这个名字从创建关键帧时的名字中选取。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>animation-duration：</strong>设置动画的执行时间。</li>
+<li><strong>animation-delay：</strong>设置动画执行之前的延迟时间。</li>
+<li><strong>animation-timing-function：</strong>设置动画执行的方式（以上四个动画属性和过渡效果的属性用法一致）。</li>
+<li><strong>animation-iteration-count：</strong>设置动画执行的次数，值可以是阿拉伯数字或 <code>infinite</code> 无限执行。</li>
+<li><strong>animatio-direction：</strong>指定动画执行的方向。  <blockquote>
+<blockquote>
+<p>可选值有：<br>1、 <strong>normal</strong> 默认值，从from向to方向执行，每次都是这样；<br>2、 <strong>reverse</strong> 从to向from方向执行；<br>3、 <strong>alternate</strong> 从from向to方向交替执行；<br>4、 <strong>alternate-reverse</strong> 从to向from方向交替执行。  </p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li><strong>animation-play-state：</strong>设置动画的状态，可选值有 <code>running</code> 默认值，动画执行以及 <code>paused</code> 动画暂停。</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>animation-fill-mode：</strong>动画的填充模式。<blockquote>
+<blockquote>
+<p>可选值有：<br>1、 <strong>none</strong> 默认值，动画执行完毕元素会回到原来的位置，但需要注意的是，动画延时等待时，元素不会处于关键帧开始状态，而是原来状态；<br>2、 <strong>forwards</strong> 动画执行完毕后元素会停在动画结束的位置；<br>3、 <strong>backwards</strong> 动画执行完毕时，停留在开始位置。但需要注意的是，动画延时等待时，元素就会处于关键帧开始状态。<br>4、 <strong>both</strong> 结合了forwards和backwards，即延时等待时，元素就处于关键帧开始状态，动画结束时，元素停留在动画最后一帧。</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>动画的简写属性</strong> <code>animation</code>，用法和过渡效果一致，详细属性无顺序要求，注意两个时间的顺序即可。</p>
+</blockquote>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><h3 id="练习1：使用transition实现米兔行走的效果"><a href="#练习1：使用transition实现米兔行走的效果" class="headerlink" title="练习1：使用transition实现米兔行走的效果"></a>练习1：使用transition实现米兔行走的效果</h3><p>&emsp;&emsp;最终效果为<br><img src="https://s1.imagehub.cc/images/2020/12/18/01.gif" alt="米兔行走效果图"><br>&emsp;&emsp;练习图片资源<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/18/bigtap-mitu-queue-big.png">下载</a><br>&emsp;&emsp;参考代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        .rabbit&#123;
+            width: 132px;
+            height: 271px;
+            margin: 50px auto;
+            background-image: url(./img/img/11/bigtap-mitu-queue-big.png);
+            background-position: 0 0;
+            transition: all steps(3) 0.2s;
+        &#125;
+        .rabbit:hover&#123;
+            background-position: -396px 0;
+        &#125;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;rabbit&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="练习2：实现卡通人物的奔跑效果。"><a href="#练习2：实现卡通人物的奔跑效果。" class="headerlink" title="练习2：实现卡通人物的奔跑效果。"></a>练习2：实现卡通人物的奔跑效果。</h3><p>&emsp;&emsp;最终效果为<br><img src="https://s1.imagehub.cc/images/2020/12/18/02.gif" alt="奔跑动画效果图"><br>&emsp;&emsp;练习图片资源<a target="_blank" rel="noopener" href="https://s1.imagehub.cc/images/2020/12/18/bg2.png">下载</a><br>&emsp;&emsp;参考代码：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        .box1&#123;
+            width: 256px;
+            height: 256px;
+            margin: 50px auto;
+            background-image: url(./img/img/12/bg2.png);
+            animation: run 3s steps(6) infinite;
+        &#125;
+        @keyframes run &#123;
+            from&#123;
+                background-position: 0 0;
+            &#125;
+            to&#123;
+                background-position: -1536px 0;
+            &#125;
+        &#125;
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/CSS/">CSS</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/CSS/">CSS</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/Web/">Web</a></div><hr></div></article></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2020-12-16  <a class="commentCountImg" href="/2020/1216/28cddff3.html#comment-container"><span class="display-none-class">5a9b55342be77b37726370f4749d6107</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="5a9b55342be77b37726370f4749d6107">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>9 分钟  <i class="fas fa-pencil-alt"> </i>1.4 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/1216/28cddff3.html">Markdown使用</a></h1><div class="content"><h1 id="Markdown使用"><a href="#Markdown使用" class="headerlink" title="Markdown使用"></a>Markdown使用</h1><h2 id="Markdown标题"><a href="#Markdown标题" class="headerlink" title="Markdown标题"></a>Markdown标题</h2><ul>
+<li>使用’ = ‘和’ - ‘标记一级标题和二级标题<h1 id="我展示的是一级标题（只要下方有一个等号即可）"><a href="#我展示的是一级标题（只要下方有一个等号即可）" class="headerlink" title="我展示的是一级标题（只要下方有一个等号即可）"></a>我展示的是一级标题（只要下方有一个等号即可）</h1></li>
+</ul>
+<h2 id="我展示的是二级标题"><a href="#我展示的是二级标题" class="headerlink" title="我展示的是二级标题"></a>我展示的是二级标题</h2><ul>
+<li>使用’ # ‘号的个数来标记标题的级别，有1~6这六个级别的标题，#个数越多，代表标题级别越低。</li>
+</ul>
+<h2 id="Markdown段落"><a href="#Markdown段落" class="headerlink" title="Markdown段落"></a>Markdown段落</h2><p>Markdown段落没有特殊的格式，直接编写文字就好。<br><strong>段落换行：</strong>使用两个以上的空格加回车，然后在该行输入文字，即可实现段落的换行。<br><font color=red>注意，这种做法是实现换行，两行之间并没有空一行；</font><br><strong>两行之间空一行：</strong>输入文字时在两行之间空一行。</p>
+<h2 id="Markdown字体"><a href="#Markdown字体" class="headerlink" title="Markdown字体"></a>Markdown字体</h2><ul>
+<li>斜体<ol>
+<li>使用两个星号*将文字包裹起来，可实现斜体；</li>
+<li>使用英文输入法的两个下划线_也可实现斜体；</li>
+</ol>
+</li>
+<li>文本加粗<ol>
+<li>左右均使用两个星号*包裹文字，可实现文字加粗效果；</li>
+<li>左右均使用英文输入法的两个下划线_也可实现文本的加粗效果。</li>
+</ol>
+</li>
+<li>粗斜体文本<ol>
+<li>左右各使用三个星号*将文字包裹，可实现粗斜体文本；</li>
+<li>左右各使用英文输入法的三个下划线_，也可实现粗斜体文本。<br><img src="https://s1.imagehub.cc/images/2020/12/16/149f065fc241fe142.png" alt="字体效果"></li>
+</ol>
+</li>
+</ul>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。<br><img src="https://s1.imagehub.cc/images/2020/12/16/2.png" alt="分割线效果"></p>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML 的 u 标签来实现：<br><img src="https://s1.imagehub.cc/images/2020/12/16/3.png" alt="下划线效果"></p>
+<h2 id="Markdown列表"><a href="#Markdown列表" class="headerlink" title="Markdown列表"></a>Markdown列表</h2><p>Markdown 支持有序列表和无序列表。  </p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>无序列表使用星号、加号或是减号作为列表标记，这些标记后面要添加一个空格，然后再填写内容：<br><img src="https://s1.imagehub.cc/images/2020/12/16/4.png" alt="无序列表效果"></p>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>有序列表使用数字并加上 . 号来表示，如：<br><img src="https://s1.imagehub.cc/images/2020/12/16/5a94e9ca455f38b74.png" alt="有序列表效果"></p>
+<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><p>列表嵌套只需在子列表中的选项前面添加四个空格即可：<br><img src="https://s1.imagehub.cc/images/2020/12/16/6.png" alt="列表嵌套效果"></p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>使用HTML的del标签实现。<br><del>删除文字</del></p>
+<h2 id="Markdown区块"><a href="#Markdown区块" class="headerlink" title="Markdown区块"></a>Markdown区块</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号。<br><img src="https://s1.imagehub.cc/images/2020/12/16/7813e7c0a782e3937.png" alt="区块效果"><br>另外区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推。<br><img src="https://s1.imagehub.cc/images/2020/12/16/8.png" alt="区块嵌套效果"></p>
+<h2 id="区块中使用列表"><a href="#区块中使用列表" class="headerlink" title="区块中使用列表"></a>区块中使用列表</h2><p>具体用法见下面实例：<br><img src="https://s1.imagehub.cc/images/2020/12/16/9b3a394c0fe1c1c14.png" alt="区块中使用列表"></p>
+<h2 id="列表中使用区块"><a href="#列表中使用区块" class="headerlink" title="列表中使用区块"></a>列表中使用区块</h2><p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。区块中使用列表实例如下：<br><img src="https://s1.imagehub.cc/images/2020/12/16/10.png" alt="列表中使用区块"></p>
+<h2 id="Markdown代码"><a href="#Markdown代码" class="headerlink" title="Markdown代码"></a>Markdown代码</h2><ul>
+<li>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`）。</li>
+<li>代码区块：代码区块使用 4 个空格或者一个制表符（Tab 键）来包裹代码；也可以使用三对反引号来包裹代码块。</li>
+</ul>
+<h2 id="Markdown链接"><a href="#Markdown链接" class="headerlink" title="Markdown链接"></a>Markdown链接</h2><p>链接的使用方法为：<code>[链接名称](链接地址)</code>或<code>&lt;链接地址&gt;</code>，两个实例分别为：<br><a target="_blank" rel="noopener" href="https://qishengx.github.io/">徐齐胜的博客</a>、<a target="_blank" rel="noopener" href="https://qishengx.github.io/">https://qishengx.github.io/</a><br><strong>高级链接：</strong>通过变量来设置链接，变量赋值在文档末尾进行。一个实例为：<br><img src="https://s1.imagehub.cc/images/2020/12/16/11.png" alt="高级链接案例"></p>
+<h2 id="Markdown图片"><a href="#Markdown图片" class="headerlink" title="Markdown图片"></a>Markdown图片</h2><p>Markdown语法格式为：  </p>
+<ul>
+<li>开头一个感叹号 !;  </li>
+<li>接着一个方括号，里面放上图片的替代文字;  </li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。<br><img src="https://s1.imagehub.cc/images/2020/12/16/12.png" alt="Markdown图片语法"><br>当然，你也可以像网址那样对图片网址使用变量:<br><img src="https://s1.imagehub.cc/images/2020/12/16/13d6306a3946c9193b.png" alt="图片的高级用法"><br><font color=red>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <code>&lt;img&gt;</code> 标签。</font></li>
+</ul>
+<h2 id="Markdown表格"><a href="#Markdown表格" class="headerlink" title="Markdown表格"></a>Markdown表格</h2><blockquote>
+<p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：<br><img src="https://s1.imagehub.cc/images/2020/12/16/14.png" alt="Markdown表格语法规则"></p>
+<blockquote>
+<p>表格对齐方式<br>我们可以设置表格的对齐方式：<br>-: 设置内容和标题栏居右对齐。<br>:- 设置内容和标题栏居左对齐。<br>:-: 设置内容和标题栏居中对齐。<br>实例如下：<br><img src="https://s1.imagehub.cc/images/2020/12/16/15.png" alt="表格实例"></p>
+</blockquote>
+</blockquote>
+<h2 id="Markdown高级技巧"><a href="#Markdown高级技巧" class="headerlink" title="Markdown高级技巧"></a>Markdown高级技巧</h2><ul>
+<li>支持HTML元素：不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</li>
+<li>转义：Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠 \ 转义特殊字符。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>- [1] <a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/Markdown/">Markdown</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/Markdown/">Markdown</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/">文本编辑</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2020-12-15  <a class="commentCountImg" href="/2020/1215/dbc0e3b9.html#comment-container"><span class="display-none-class">0cec4ab9fa198236a12e6b71f06b7206</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="0cec4ab9fa198236a12e6b71f06b7206">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 分钟  <i class="fas fa-pencil-alt"> </i>0.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/1215/dbc0e3b9.html">前端概述</a></h1><div class="content"><h2 id="网站逻辑介绍"><a href="#网站逻辑介绍" class="headerlink" title="网站逻辑介绍"></a>网站逻辑介绍</h2><p>前端分为客户端与服务器。其中，客户端是通过浏览器解析前端工程师所写的网页源码来实现（我们日常的上网所浏览的网页都是基于这个逻辑的），服务器主要处理前端的请求并返回结果响应。<br>前端页面所涉及的核心技术为HTML（超文本标记语言）、CSS（层叠样式表）和JavaScript。其中，HTML是网页骨架，CSS控制网页的显示样式，JavaScript控制网页的行为（这三种技术一般称为“结构—样式—行为”）。</p>
+<h2 id="前端学习路线"><a href="#前端学习路线" class="headerlink" title="前端学习路线"></a>前端学习路线</h2><p>学习Web开发一般可以按照先学HTML，然后学习CSS，最后再学Javascript这样的顺序进行。当然，需要注意的是，初学阶段，在学习HTML时，主要以对各个标签熟悉为主。对于暂时理解不了的知识不要过于纠结，随着学习的深入这些疑问才能慢慢理解，比如HTML表单，在没有学习JavaScript以及后端的知识时，很难完全理解表单的运行逻辑；在学习CSS时，同样是以熟悉各个CSS熟悉为主，不必要求一下子要记住所有的属性，但务必要将各个属性的原理理解清楚，比如外边距折叠、高度塌陷等问题是怎么产生的；到了学习JavaScript时，不仅要学习它的理论知识，还要勤于动手，在练习实践中学习、理解知识。  </p>
+<p>最后，在学习这三部分内容时，一定要耐下心来，把每个知识点都过一遍，多多练习。这三部分知识是整个网页前端的基础和核心。</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/Web/">Web</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/Web/">Web</a></div><hr></div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">上一页</a></div><div class="pagination-next is-invisible is-hidden-mobile"><a href="/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png" alt="辣椒の酱"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">辣椒の酱</p><p class="is-size-6 is-block">尚未执佩剑，转眼即江湖</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>阿尔及利亚</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/removeif"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/removeif"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:removeif@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://removeif.github.io/remove.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-18T08:35:49.000Z">2021-11-18</time></p><p class="title"><a href="/2021/1118/3d983c74.html">CentOS7配置MPI集群</a></p><p class="categories"><a href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/">并行化</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-16T03:08:14.000Z">2021-09-16</time></p><p class="title"><a href="/2021/0916/1ed4658b.html">C++使用OpenMp并行记录</a></p><p class="categories"><a href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/">并行化</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-22T01:48:14.000Z">2021-08-22</time></p><p class="title"><a href="/2021/0822/6dba3ed0.html">算法的时间复杂度</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-17T05:16:24.000Z">2021-08-17</time></p><p class="title"><a href="/2021/0817/df93fdb0.html">matery主题下Markdown常用编程语言代码块规范</a></p><p class="categories"><a href="/categories/%E6%95%99%E7%A8%8B/">教程</a> / <a href="/categories/%E6%95%99%E7%A8%8B/Markdown/">Markdown</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-14T04:50:00.000Z">2021-08-14</time></p><p class="title"><a href="/2021/0814/ebeb7b66.html">Hexo快速开始</a></p><p class="categories"><a href="/categories/%E6%95%99%E7%A8%8B/">教程</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/MongoDB/"><span class="level-start"><span class="level-item">MongoDB</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/"><span class="level-start"><span class="level-item">并行化</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%95%99%E7%A8%8B/"><span class="level-start"><span class="level-item">教程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E6%95%99%E7%A8%8B/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="level-start"><span class="level-item">程序设计</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"><span class="level-start"><span class="level-item">自动化</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPI/"><span class="tag">MPI</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OpenMP/"><span class="tag">OpenMP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/"><span class="tag">Web自动化</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mongoDB/"><span class="tag">mongoDB</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/selenium/"><span class="tag">selenium</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/"><span class="tag">文本编辑</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87/"><span class="tag">算法效率</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"><span class="tag">软件安装教程</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9B%86%E7%BE%A4/"><span class="tag">集群</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="chessSaint" height="28"></a><p class="size-small"><span>&copy; 2021 QishengXu</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">川ICP备88888888号-8（测试）</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2018/11/11 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
                 }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/chessSaint" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1143347768@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1143347768" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1143347768" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-    </div>
-</footer>
-
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
             }
-        });
-    };
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('7ceaf9aad2197bebef01','769c0c9370c57fd74d8610dc6ea5538ee2c45dd7','chessSaint','blog_comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
 
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
         }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
 
-    
-
-    
-
-	
-    
-
-    
-
-    
-
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
-</body>
-
-</html>
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('7ceaf9aad2197bebef01','769c0c9370c57fd74d8610dc6ea5538ee2c45dd7','chessSaint','blog_comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

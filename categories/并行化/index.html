@@ -1,919 +1,263 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-
-
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="分类: 并行化, github, Web, HTML,CSS,JavaScript">
-    <meta name="description" content="学习、记录、分享">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
-
-    <title>分类: 并行化 | chessSaint</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
-
-    <script src="/libs/jquery/jquery.min.js"></script>
-
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="chessSaint" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-
-
-
-
-<body>
-    <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">chessSaint</span>
-                </a>
-            </div>
-            
-
-<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
-<ul class="right nav-menu">
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/" class="waves-effect waves-light">
-      
-      <i class="fas fa-home" style="zoom: 0.6;"></i>
-      
-      <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
-      
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
-      
-      <span>分类</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/about" class="waves-effect waves-light">
-      
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-      
-      <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
-  <li>
-    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
-    </a>
-  </li>
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>分类: 并行化 - chessSaint</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="chessSaint"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="chessSaint"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="学习、记录、分享"><meta property="og:type" content="blog"><meta property="og:title" content="辣椒の酱"><meta property="og:url" content="https://removeif.github.io/"><meta property="og:site_name" content="辣椒の酱"><meta property="og:description" content="学习、记录、分享"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:author" content="removeif"><meta property="article:tag" content="github, Web, HTML,CSS,JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.xuqisheng.top"},"headline":"chessSaint","image":["https://blog.xuqisheng.top/img/og_image.png"],"author":{"@type":"Person","name":"QishengXu"},"description":"学习、记录、分享"}</script><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="chessSaint" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="chessSaint" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">并行化</a></li></ul></nav></div></div><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-11-18  <a class="commentCountImg" href="/2021/1118/3d983c74.html#comment-container"><span class="display-none-class">0e30aecb051f9e054f33cb7a7200cec4</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="0e30aecb051f9e054f33cb7a7200cec4">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>16 分钟  <i class="fas fa-pencil-alt"> </i>2.3 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/1118/3d983c74.html">CentOS7配置MPI集群</a></h1><div class="content"><h1 id="集群设计"><a href="#集群设计" class="headerlink" title="集群设计"></a>集群设计</h1><p>本次搭建共使用三台机器，系统为CentOS7，其中一台作为管理节点，负责登录；另外两台分别作为计算节点，负责执行并行程序。机器配置如下：<br>| 节点名称 | 节点IP地址 | 核数 |<br>| —- | —- | —- |<br>| mu01 | 192.168.84.130 | 2 |<br>| cu01 | 192.168.84.131 | 2 |<br>| cu02 | 192.168.84.129 | 2 |</p>
+<h1 id="节点设置"><a href="#节点设置" class="headerlink" title="节点设置"></a>节点设置</h1><ul>
+<li>配置节点的IP地址<br>配置每个节点的 IP 地址，过程如下：<br>首先，使用<code>ip addr</code>查看网卡名，如图红框中即为该机的网卡名。<br><img src="https://s1.imagehub.cc/images/2021/11/18/ip01.png" alt="查看网卡名"><br>使用<code>vi /etc/sysconfig/network-scripts/ifcfg-&#123;网卡名&#125;</code>编辑网卡配置文件，添加或修改如下配置：<br><img src="https://s1.imagehub.cc/images/2021/11/18/ip02.png" alt="修改网卡配置文件"><br>配置后重启网卡，使其生效，其中 IPADDR 的值按上表进行填写，<code>systemctl restart network</code>  </li>
+<li>主机名配置  </li>
 </ul>
+<ol>
+<li>设置三个节点的主机名分别为mu01、cu01、cu02，使用<code>hostnamectl set-hostname 主机名</code>设置。</li>
+<li>修改/etc/hosts文件实现主机名与ip地址对应，在每个节点的hosts文件中加入：<br>```</li>
+<li>168.100.10 mu01</li>
+<li>168.100.11 cu01</li>
+<li>168.100.12 cu02<br>```<br>配置完成后重启，<code>source /etc/hosts</code>，此时各节点可通过<code>ssh 节点名</code>互访。</li>
+</ol>
+<h1 id="MPI-环境安装"><a href="#MPI-环境安装" class="headerlink" title="MPI 环境安装"></a>MPI 环境安装</h1><p>MPI 并不是一种新的开发语言，它是一个定义了可以被 C、C++ 和 Fortran 程序调用的函数库。它有多种实现，本次使用的是 mpich 的 MPI 实现，此外还有 openmpi、intelmpi 等实现。  </p>
+<h2 id="在管理节点mu01上安装-MPI-环境："><a href="#在管理节点mu01上安装-MPI-环境：" class="headerlink" title="在管理节点mu01上安装 MPI 环境："></a>在管理节点mu01上安装 MPI 环境：</h2><ol>
+<li>安装 gcc 编译器<pre><code>yum install gcc gcc-c++ gcc-gfortran
+</code></pre>
+</li>
+<li>下载安装 mpich<pre><code>wget http://www.mpich.org/static/downloads/3.3/mpich-3.3.tar.gz
+tar -xzvf mpich-3.3.tar.gz
+cd mpich-3.3
+./configure --prefix=/opt/mpich
+make
+make install
+</code></pre>
+其中，<code>make</code>和<code>make install</code>两条指令可以合并为一条写<code>make &amp;&amp; make install</code>。</li>
+<li>设置环境变量<br>编辑 ~/bashrc<code>vi ~/bashrc</code>，添加以下内容：<pre><code>export PATH=/opt/mpich/bin/:%PATH
+</code></pre>
+设置完以后使用<code>which mpicc</code>、<code>which mpiexec</code>检测是否安装配置成功。结果如下说明配置成功：<br><img src="https://s1.imagehub.cc/images/2021/11/18/mpi01.png" alt="MPI安装成功示例"></li>
+<li>在mu01上测试MPI<br>编写测试程序 <code>vi mpitest.c</code><pre><code>#include &lt;mpi.h&gt;
+#include &lt;stdio.h&gt;
+int main (int argc, char* argv[])
+&#123;
+ int rank, size;
+ MPI_Init (&amp;argc, &amp;argv); /* starts MPI*/
+ MPI_Comm_rank (MPI_COMM_WORLD, &amp;rank); /* get current process id*/
+ MPI_Comm_size (MPI_COMM_WORLD, &amp;size); /* get number of processes*/
+ printf( &quot;Hello world from process %d of %dn&quot;, rank, size );
+ MPI_Finalize();
+ return 0;
+&#125;
+</code></pre>
+使用管理节点单个节点运行MPI程序进行测试：<pre><code>mpicc mpitest.c -o hello  # 编译
+mpiexec -np 5 ./hello  # 执行
+</code></pre>
+编译运行结果如下：<pre><code>Hello world from process 4 of 5
+Hello world from process 2 of 5
+Hello world from process 3 of 5
+Hello world from process 0 of 5
+Hello world from process 1 of 5
+</code></pre>
+注意：一般情况下，管理节点只进行程序编译与提交任务，不建议在管理节点运行计算程序。</li>
+</ol>
+<p>＃　NFS 安装<br>由于 MPICH 的安装目录和用户可执行程序在并行计算时需要在所有节点存副本，而且目录要相互对应，每次一个节点一个节点地复制非常麻烦，采用 NFS 文件系统可以实现所有节点内容与管理节点内容同步更新，并自动实现目录的对应。　　<br>对于仅包含几个结点的较小的集群系统，可以任意指定其中一个结点作为 NFS 服务器。对较大的集群系统，最好设定一个或数个结点专门用于文件服务，这些结点称为 I/O 结点，它们专门负责存储设备的管理，不参加计算。这里选择 mu01 作为 NFS 服务器，将它的/home 和/opt 目录输出给其他三个结点。　　<br>1.　在每个节点上安装 NFS 所需软件包并设置为开机启动</p>
+<pre><code>yum install nfs-utils rpcbind
+systemctl enable rpcbind.service  # 设置开机启动
+systemctl enable nfs-server.service  
+systemctl start rpcbind.service  # 启动服务
+systemctl start nfs-server.service
+</code></pre>
+<p>注意：上述操作依次执行。<br>2.　在mu01节点配置共享目录</p>
+<pre><code>vi /etc/exports
 
+# 添加以下内容
+/home    *(async,insecure,rw,no_all_squash,no_root_squash)  # 将mu01的home目录设置为共享目录
+/opt    *(async,insecure,rw,no_all_squash,no_root_squash)  # 将mu01的opt目录设置为共享目录
+</code></pre>
+<p>刷新 NFS 设置：<code>exportfs -ra</code> 查看 NFS 状态：<code>exportfs -v</code><br>注意：设置opt目录为共享目录后，其他节点就不需要重新安装mpi环境了，只需安装运行mpi所需的依赖库就行（后续会具体说到）<br>3.　在子节点 cu01 和 cu02 上挂载 NFS，查看可挂载目录 <code>showmount -e mu01</code>。<br>挂载 opt 与 home 目录：</p>
+<pre><code>mount -t nfs mu01:/opt /opt
+mount -t nfs mu01:/home /home
+</code></pre>
+<p>设置开机自动挂载：<br>追加下面配置到/etc/fstab</p>
+<pre><code>mu01:/home /home nfs defaults,nfsvers=3 0 0
+mu01:/opt /opt nfs defaults,nfsvers=3 0 0
+</code></pre>
+<p><code>df -h</code> 查看是否挂载成功，成功输出如下：<br><img src="https://s1.imagehub.cc/images/2021/11/18/NFS01.png" alt="挂载成功示例"></p>
+<h1 id="子节点-cu01-和-cu02-上MPI环境搭建"><a href="#子节点-cu01-和-cu02-上MPI环境搭建" class="headerlink" title="子节点 cu01 和 cu02 上MPI环境搭建"></a>子节点 cu01 和 cu02 上MPI环境搭建</h1><p>前面我们已经将 mu01 的/opt 目录设置为共享目录，因此子节点无需重新安装mpi，只需将MPI程序的运行依赖安装上即可，即安装 gcc 编译器，在子节点中分别运行如下命令。  </p>
+<pre><code>yum install gcc gcc-c++ gcc-gfortran
+</code></pre>
+<p>进入/opt/mpich/share <code>cd /opt/mpich/share</code>，编写测试程序mpitest.c <code>vi mpitest.c</code>，内容与之前一样，编译运行，如果能成功执行说明子节点MPI环境配置成功。</p>
+<h1 id="NIS-安装"><a href="#NIS-安装" class="headerlink" title="NIS 安装"></a>NIS 安装</h1><p>集群中的每台主机都需要设计相同的帐号密码是非常麻烦的，因此可通过一个 NIS 主控制服务器管理集群中所有帐号密码,当其他主机有登录需求时再向主控制服务器请求相关账户信息。以 mu01 结点当作 NIS 主控制结点为服务端，cu 结点为客户端。  </p>
+<ol>
+<li>安装相关软件<br>服务端： <code>yum install ypserv rpcbind</code><br>客户端： <code>yum install ypbind</code></li>
+<li>NIS 服务端配置</li>
+</ol>
+<ul>
+<li>设定 NIS 局域网名称：编辑/etc/sysconfig/network 加入配置 NISDOMAIN=mu</li>
+<li>设置主要配置文件：编辑 NIS 配置文件/etc/ypserv.conf，允许特定的主机访问 NIS 服务器,在查询权限部分加入：<br>```</li>
+</ul>
+<p>127.0.0.0/255.255.255.0     : * : * : none<br>192.168.84.0/255.255.255.0 : * : * : none</p>
+<ul>
+<li><pre><code>                      : * : * : deny
+</code></pre>
+```</li>
+</ul>
+<ul>
+<li>启动 NIS 与设置开机启动<pre><code>systemctl start ypserv
+systemctl enable ypserv
+</code></pre>
+使用 <code>rpcinfo -u localhost ypserv</code>检测是否启动成功。</li>
+<li>建立用户资料库<br>执行命令 <code>/usr/lib64/yp/ypinit -m</code>建立数据库，在我们的集群环境中，只有mu01一个管理节点，直接按 <code>ctrl D</code> + 回车即设置完毕，将 nis 服务器端的用户信息导入，当用户信息更新时，也需重新执行该命令更新数据库。<br>建立完数据库后，需要将服务重启 <code>systemctl restart ypserv</code>。</li>
+</ul>
+<ol start="3">
+<li>NIS 客户端配置</li>
+</ol>
+<ul>
+<li>设置 NIS 网域名称与服务端操作相同</li>
+<li>修改用户密码的认证顺序 <code>vim /etc/nsswitch.conf</code> 修改以下配置：<pre><code>passwd:     files nis
+shadow:     files nis
+group:      files nis
+hosts:      files nis dns
+</code></pre>
+</li>
+<li>修改客户端配置文件: 配置/etc/yp.conf，添加 <code>domain mu server mu01</code></li>
+<li>修改系统认证文件: <code>vim /etc/sysconfig/authconfig</code>，修改 <code>USENIS=yes</code>；<code>vim /etc/pam.d/system-auth</code>，修改 <code>password sufficient pam_unix.so sha512 shadow nis nullok try_first_pass use_authtok</code>。</li>
+<li>启动服务并设置为开机启动<pre><code>systemctl start ypbind
+systemctl enable ypbind
+</code></pre>
+在 NIS client 输入 <code>yptest</code> 测试是否配置成功。</li>
+</ul>
+<h1 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h1><p>MPI 并行程序运行时需要设计多机互访免密码，因此下面进行ssh免密登录配置</p>
+<ol>
+<li>配置 mu01 免密登录 cu01 和 cu02。</li>
+</ol>
+<ul>
+<li>生成公钥和授权文件<pre><code>ssh-keygen -t rsa  # 该命令一路回车即可，会在~/.ssh/下生成两个文件
+cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys  # 将上一步生成的公钥文件复制到authorized_keys授权文件中
+chmod 700 .ssh  # 设置authorized_keys的权限，下同
+chmod 600 .ssh/authorized_keys
+</code></pre>
+</li>
+<li>将授权文件复制给子节点<pre><code>scp ~/.ssh/authorized_keys root@cu01:~/.ssh/
+scp ~/.ssh/authorized_keys root@cu02:~/.ssh/
+</code></pre>
+此时，输入 <code>ssh cu01</code>，会提示输入cu01的密码，输入这一次即可，以后再从mu01切换到cu01就不用再输密码了；cu02操作同cu01。</li>
+</ul>
+<ol start="2">
+<li>依次配置子节点和其他节点之间的免密登录，在本示例中，还需配置 cu01 与 mu01、cu02 以及 cu02 与 mu01、cu01之间的免密登录，全部配置好后即可实现三台机器互相免密登录。</li>
+</ol>
+<h1 id="多机运行MPI程序"><a href="#多机运行MPI程序" class="headerlink" title="多机运行MPI程序"></a>多机运行MPI程序</h1><p>在mu01节点的/opt/mpich/share/中编写文件mpi_duoji_test.c，输入：</p>
+<pre><code>#include &lt;mpi.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+int main(argc,argv)int argc;char *argv[];
+&#123;
+    int myid,numprocs;
+    int namelen;
+    char processor_name[MPI_MAX_PROCESSOR_NAME];
 
-<div id="mobile-nav" class="side-nav sidenav">
-
-    <div class="mobile-head bg-color">
-        
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
-        
-        <div class="logo-name">chessSaint</div>
-        <div class="logo-desc">
-            
-            学习、记录、分享
-            
-        </div>
-    </div>
-
-    
-
-    <ul class="menu-list mobile-menu-list">
-        
-        <li class="m-nav-item">
-	  
-		<a href="/" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-home"></i>
-			
-			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/about" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-user-circle"></i>
-			
-			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
-		</a>
-          
-        </li>
-        
-        
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com/chessSaint/chessSaint.github.io" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Fork Me
-            </a>
-        </li>
-        
-    </ul>
-</div>
-
-
-        </div>
-
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="https://github.com/chessSaint/chessSaint.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewBox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
-              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
-              fill="currentColor" class="octo-body"></path>
-    </svg>
-</a>
-        
-    </nav>
-
-</header>
-
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                清风徐来
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/CSS/" title="CSS: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">CSS
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Web/" title="Web: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">Web
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%95%99%E7%A8%8B/" title="教程: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">教程
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Markdown/" title="Markdown: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">Markdown
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/MongoDB/" title="MongoDB: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">MongoDB
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/" title="自动化: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">自动化
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%95%99%E7%A8%8B/Markdown/" title="Markdown: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">Markdown
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" title="程序设计: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D7BDE2;">程序设计
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/" title="并行化: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #A3E4D7;">并行化
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/1118/3d983c74.html">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="CentOS7配置MPI集群">
-                            
-                            <span class="card-title">CentOS7配置MPI集群</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                集群设计本次搭建共使用三台机器，系统为CentOS7，其中一台作为管理节点，负责登录；另外两台分别作为计算节点，负责执行并行程序。机器配置如下：| 节点名称 | 节点IP地址 | 核数 || —- | —- | —- || mu01 | 1
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/" class="post-category">
-                                    并行化
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="/tags/MPI/">
-                            <span class="chip bg-color">MPI</span>
-                        </a>
-                        
-                        <a href="/tags/%E9%9B%86%E7%BE%A4/">
-                            <span class="chip bg-color">集群</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2021/0916/1ed4658b.html">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="C++使用OpenMp并行记录">
-                            
-                            <span class="card-title">C++使用OpenMp并行记录</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                概述Visual Studio2019已内置支持OpenMP，但在使用之前还需要做一些配置。
-具体步骤（以控制台应用程序为例）
-创建项目创建一个控制台应用程序，并在.cpp文件中输入以下测试代码``` C++#include &lt;omp
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/" class="post-category">
-                                    并行化
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C++</span>
-                        </a>
-                        
-                        <a href="/tags/OpenMP/">
-                            <span class="chip bg-color">OpenMP</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
-</main>
-
-
-
-
-    <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="503838841"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
-            Copyright&nbsp;&copy;
-            
-                <span id="year">2020-2021</span>
-            
-            <span id="year">2020</span>
-            <a href="/about" target="_blank">QishengXu</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
-            
-            <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2020";
-                    var startMonth = "12";
-                    var startDate = "15";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
+    MPI_Init(&amp;argc, &amp;argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &amp;myid);
+    MPI_Comm_size(MPI_COMM_WORLD, &amp;numprocs);
+    MPI_Get_processor_name(processor_name,&amp;namelen);
+    fprintf(stderr,&quot;Hello World!process %d of %d on  %s\n&quot;,myid,numprocs,processor_name);
+    MPI_Finalize();
+    return 0;
+&#125;
+</code></pre>
+<p>然后依次运行如下命令：</p>
+<pre><code>mpicc mpi_duoji_test.c -o ./hello  # 编译
+mpiexec -hosts cu01,cu02 -np 8 ./hello
+</code></pre>
+<p>运行结果为：<br><img src="https://s1.imagehub.cc/images/2021/11/18/mpi_duoji.png" alt="mpi多机运行结果"><br>说明程序已在多机上运行。</p>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/">并行化</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/C/">C++</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/MPI/">MPI</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/%E9%9B%86%E7%BE%A4/">集群</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-16  <a class="commentCountImg" href="/2021/0916/1ed4658b.html#comment-container"><span class="display-none-class">0d5f3a6629ba8d55bd0754b574ddf8c3</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="0d5f3a6629ba8d55bd0754b574ddf8c3">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>2 分钟  <i class="fas fa-pencil-alt"> </i>0.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/0916/1ed4658b.html">C++使用OpenMp并行记录</a></h1><div class="content"><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Visual Studio2019已内置支持OpenMP，但在使用之前还需要做一些配置。</p>
+<h2 id="具体步骤（以控制台应用程序为例）"><a href="#具体步骤（以控制台应用程序为例）" class="headerlink" title="具体步骤（以控制台应用程序为例）"></a>具体步骤（以控制台应用程序为例）</h2><ol>
+<li>创建项目<br>创建一个控制台应用程序，并在.cpp文件中输入以下测试代码<br>``` C++<br>#include &lt;omp.h&gt;  //引入openMP头文件<br>#include <iostream></li>
+</ol>
+<p>using namespace std;</p>
+<p>int main()<br>{<br>#pragma omp parallel<br>    {<br>        cout &lt;&lt; “Hello World!\n”;<br>    }<br>}</p>
+<pre><code>如果这时直接编译运行会报以下错误，所以需要对项目进行配置：
+``` bash
+c1xx: error C2338: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+c1xx: fatal error C1903: unable to recover from previous error(s); stopping compilation
+error MSB6006: &quot;CL.exe&quot; exited with code 2
+</code></pre>
+<ol start="2">
+<li>配置项目<br>在项目属性中，进行如下三处配置：<br><img src="https://s1.imagehub.cc/images/2021/09/16/openmp1.png" alt="openmp1配置"></li>
+<li>验证是否成功<br>启动项目，可以在控制台看到以下内容，表明配置成功。<br><img src="https://s1.imagehub.cc/images/2021/09/16/result.png" alt="配置成功结果图"></li>
+</ol>
+</div><div class="index-category-tag"><div class="level-item"><i class="fas fa-folder-open has-text-grey"> </i><a class="article-more button is-small link-muted index-categories" href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/">并行化</a></div>  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/C/">C++</a><span> </span><a class="article-more button is-small link-muted index-tags" href="/tags/OpenMP/">OpenMP</a></div><hr></div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png" alt="辣椒の酱"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">辣椒の酱</p><p class="is-size-6 is-block">尚未执佩剑，转眼即江湖</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>阿尔及利亚</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/removeif"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/removeif"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:removeif@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://removeif.github.io/remove.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-11-18T08:35:49.000Z">2021-11-18</time></p><p class="title"><a href="/2021/1118/3d983c74.html">CentOS7配置MPI集群</a></p><p class="categories"><a href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/">并行化</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-09-16T03:08:14.000Z">2021-09-16</time></p><p class="title"><a href="/2021/0916/1ed4658b.html">C++使用OpenMp并行记录</a></p><p class="categories"><a href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/">并行化</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-22T01:48:14.000Z">2021-08-22</time></p><p class="title"><a href="/2021/0822/6dba3ed0.html">算法的时间复杂度</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">程序设计</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-17T05:16:24.000Z">2021-08-17</time></p><p class="title"><a href="/2021/0817/df93fdb0.html">matery主题下Markdown常用编程语言代码块规范</a></p><p class="categories"><a href="/categories/%E6%95%99%E7%A8%8B/">教程</a> / <a href="/categories/%E6%95%99%E7%A8%8B/Markdown/">Markdown</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-14T04:50:00.000Z">2021-08-14</time></p><p class="title"><a href="/2021/0814/ebeb7b66.html">Hexo快速开始</a></p><p class="categories"><a href="/categories/%E6%95%99%E7%A8%8B/">教程</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/MongoDB/"><span class="level-start"><span class="level-item">MongoDB</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/"><span class="level-start"><span class="level-item">并行化</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%95%99%E7%A8%8B/"><span class="level-start"><span class="level-item">教程</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E6%95%99%E7%A8%8B/Markdown/"><span class="level-start"><span class="level-item">Markdown</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="level-start"><span class="level-item">程序设计</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/"><span class="level-start"><span class="level-item">自动化</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/11/"><span class="level-start"><span class="level-item">十一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/C/"><span class="tag">C++</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Markdown/"><span class="tag">Markdown</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPI/"><span class="tag">MPI</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OpenMP/"><span class="tag">OpenMP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web%E8%87%AA%E5%8A%A8%E5%8C%96/"><span class="tag">Web自动化</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mongoDB/"><span class="tag">mongoDB</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/selenium/"><span class="tag">selenium</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="tag">数据库</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/"><span class="tag">文本编辑</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87/"><span class="tag">算法效率</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"><span class="tag">软件安装教程</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9B%86%E7%BE%A4/"><span class="tag">集群</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="chessSaint" height="28"></a><p class="size-small"><span>&copy; 2021 QishengXu</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">川ICP备88888888号-8（测试）</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2018/11/11 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
                 }
-                setInterval(siteTime, 1000);
-            </script>
-            
-            <br>
-            
-        </div>
-        <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/chessSaint" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1143347768@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1143347768" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1143347768" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
-</div>
-    </div>
-</footer>
-
-<div class="progress-bar"></div>
-
-
-    <!-- 搜索遮罩框 -->
-<div id="searchModal" class="modal">
-    <div class="modal-content">
-        <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
-                   class="search-input">
-        </div>
-        <div id="searchResult"></div>
-    </div>
-</div>
-
-<script type="text/javascript">
-$(function () {
-    var searchFunc = function (path, search_id, content_id) {
-        'use strict';
-        $.ajax({
-            url: path,
-            dataType: "xml",
-            success: function (xmlResponse) {
-                // get the contents from search data
-                var datas = $("entry", xmlResponse).map(function () {
-                    return {
-                        title: $("title", this).text(),
-                        content: $("content", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-                var $input = document.getElementById(search_id);
-                var $resultContent = document.getElementById(content_id);
-                $input.addEventListener('input', function () {
-                    var str = '<ul class=\"search-result-list\">';
-                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                    $resultContent.innerHTML = "";
-                    if (this.value.trim().length <= 0) {
-                        return;
-                    }
-                    // perform local searching
-                    datas.forEach(function (data) {
-                        var isMatch = true;
-                        var data_title = data.title.trim().toLowerCase();
-                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                        var data_url = data.url;
-                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
-                        var index_title = -1;
-                        var index_content = -1;
-                        var first_occur = -1;
-                        // only match artiles with not empty titles and contents
-                        if (data_title !== '' && data_content !== '') {
-                            keywords.forEach(function (keyword, i) {
-                                index_title = data_title.indexOf(keyword);
-                                index_content = data_content.indexOf(keyword);
-                                if (index_title < 0 && index_content < 0) {
-                                    isMatch = false;
-                                } else {
-                                    if (index_content < 0) {
-                                        index_content = 0;
-                                    }
-                                    if (i === 0) {
-                                        first_occur = index_content;
-                                    }
-                                }
-                            });
-                        }
-                        // show search results
-                        if (isMatch) {
-                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                            var content = data.content.trim().replace(/<[^>]+>/g, "");
-                            if (first_occur >= 0) {
-                                // cut out 100 characters
-                                var start = first_occur - 20;
-                                var end = first_occur + 80;
-                                if (start < 0) {
-                                    start = 0;
-                                }
-                                if (start === 0) {
-                                    end = 100;
-                                }
-                                if (end > content.length) {
-                                    end = content.length;
-                                }
-                                var match_content = content.substr(start, end);
-                                // highlight all keywords
-                                keywords.forEach(function (keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
-                                });
-
-                                str += "<p class=\"search-result\">" + match_content + "...</p>"
-                            }
-                            str += "</li>";
-                        }
-                    });
-                    str += "</ul>";
-                    $resultContent.innerHTML = str;
-                });
             }
-        });
-    };
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('7ceaf9aad2197bebef01','769c0c9370c57fd74d8610dc6ea5538ee2c45dd7','chessSaint','blog_comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
 
-    searchFunc('/search.xml', 'searchInput', 'searchResult');
-});
-</script>
-
-    <!-- 回到顶部按钮 -->
-<div id="backTop" class="top-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</div>
-
-
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    <!-- Baidu Analytics -->
-
-    <!-- Baidu Push -->
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
         }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
 
-    
-
-    
-
-	
-    
-
-    
-
-    
-
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
-</body>
-
-</html>
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('7ceaf9aad2197bebef01','769c0c9370c57fd74d8610dc6ea5538ee2c45dd7','chessSaint','blog_comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

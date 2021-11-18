@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>CentOS7配置MPI集群</title>
+      <link href="/2021/1118/3d983c74.html"/>
+      <url>/2021/1118/3d983c74.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="集群设计"><a href="#集群设计" class="headerlink" title="集群设计"></a>集群设计</h1><p>本次搭建共使用三台机器，系统为CentOS7，其中一台作为管理节点，负责登录；另外两台分别作为计算节点，负责执行并行程序。机器配置如下：<br>| 节点名称 | 节点IP地址 | 核数 |<br>| —- | —- | —- |<br>| mu01 | 192.168.84.130 | 2 |<br>| cu01 | 192.168.84.131 | 2 |<br>| cu02 | 192.168.84.129 | 2 |</p><h1 id="节点设置"><a href="#节点设置" class="headerlink" title="节点设置"></a>节点设置</h1><ul><li>配置节点的IP地址<br>配置每个节点的 IP 地址，过程如下：<br>首先，使用<code>ip addr</code>查看网卡名，如图红框中即为该机的网卡名。<br><img src="https://s1.imagehub.cc/images/2021/11/18/ip01.png" alt="查看网卡名"><br>使用<code>vi /etc/sysconfig/network-scripts/ifcfg-&#123;网卡名&#125;</code>编辑网卡配置文件，添加或修改如下配置：<br><img src="https://s1.imagehub.cc/images/2021/11/18/ip02.png" alt="修改网卡配置文件"><br>配置后重启网卡，使其生效，其中 IPADDR 的值按上表进行填写，<code>systemctl restart network</code>  </li><li>主机名配置  </li></ul><ol><li>设置三个节点的主机名分别为mu01、cu01、cu02，使用<code>hostnamectl set-hostname 主机名</code>设置。</li><li>修改/etc/hosts文件实现主机名与ip地址对应，在每个节点的hosts文件中加入：<br>```</li><li>168.100.10 mu01</li><li>168.100.11 cu01</li><li>168.100.12 cu02<br>```<br>配置完成后重启，<code>source /etc/hosts</code>，此时各节点可通过<code>ssh 节点名</code>互访。</li></ol><h1 id="MPI-环境安装"><a href="#MPI-环境安装" class="headerlink" title="MPI 环境安装"></a>MPI 环境安装</h1><p>MPI 并不是一种新的开发语言，它是一个定义了可以被 C、C++ 和 Fortran 程序调用的函数库。它有多种实现，本次使用的是 mpich 的 MPI 实现，此外还有 openmpi、intelmpi 等实现。  </p><h2 id="在管理节点mu01上安装-MPI-环境："><a href="#在管理节点mu01上安装-MPI-环境：" class="headerlink" title="在管理节点mu01上安装 MPI 环境："></a>在管理节点mu01上安装 MPI 环境：</h2><ol><li>安装 gcc 编译器<pre><code>yum install gcc gcc-c++ gcc-gfortran</code></pre></li><li>下载安装 mpich<pre><code>wget http://www.mpich.org/static/downloads/3.3/mpich-3.3.tar.gztar -xzvf mpich-3.3.tar.gzcd mpich-3.3./configure --prefix=/opt/mpichmakemake install</code></pre>其中，<code>make</code>和<code>make install</code>两条指令可以合并为一条写<code>make &amp;&amp; make install</code>。</li><li>设置环境变量<br>编辑 ~/bashrc<code>vi ~/bashrc</code>，添加以下内容：<pre><code>export PATH=/opt/mpich/bin/:%PATH</code></pre>设置完以后使用<code>which mpicc</code>、<code>which mpiexec</code>检测是否安装配置成功。结果如下说明配置成功：<br><img src="https://s1.imagehub.cc/images/2021/11/18/mpi01.png" alt="MPI安装成功示例"></li><li>在mu01上测试MPI<br>编写测试程序 <code>vi mpitest.c</code><pre><code>#include &lt;mpi.h&gt;#include &lt;stdio.h&gt;int main (int argc, char* argv[])&#123; int rank, size; MPI_Init (&amp;argc, &amp;argv); /* starts MPI*/ MPI_Comm_rank (MPI_COMM_WORLD, &amp;rank); /* get current process id*/ MPI_Comm_size (MPI_COMM_WORLD, &amp;size); /* get number of processes*/ printf( &quot;Hello world from process %d of %dn&quot;, rank, size ); MPI_Finalize(); return 0;&#125;</code></pre>使用管理节点单个节点运行MPI程序进行测试：<pre><code>mpicc mpitest.c -o hello  # 编译mpiexec -np 5 ./hello  # 执行</code></pre>编译运行结果如下：<pre><code>Hello world from process 4 of 5Hello world from process 2 of 5Hello world from process 3 of 5Hello world from process 0 of 5Hello world from process 1 of 5</code></pre>注意：一般情况下，管理节点只进行程序编译与提交任务，不建议在管理节点运行计算程序。</li></ol><p>＃　NFS 安装<br>由于 MPICH 的安装目录和用户可执行程序在并行计算时需要在所有节点存副本，而且目录要相互对应，每次一个节点一个节点地复制非常麻烦，采用 NFS 文件系统可以实现所有节点内容与管理节点内容同步更新，并自动实现目录的对应。　　<br>对于仅包含几个结点的较小的集群系统，可以任意指定其中一个结点作为 NFS 服务器。对较大的集群系统，最好设定一个或数个结点专门用于文件服务，这些结点称为 I/O 结点，它们专门负责存储设备的管理，不参加计算。这里选择 mu01 作为 NFS 服务器，将它的/home 和/opt 目录输出给其他三个结点。　　<br>1.　在每个节点上安装 NFS 所需软件包并设置为开机启动</p><pre><code>yum install nfs-utils rpcbindsystemctl enable rpcbind.service  # 设置开机启动systemctl enable nfs-server.service  systemctl start rpcbind.service  # 启动服务systemctl start nfs-server.service</code></pre><p>注意：上述操作依次执行。<br>2.　在mu01节点配置共享目录</p><pre><code>vi /etc/exports# 添加以下内容/home    *(async,insecure,rw,no_all_squash,no_root_squash)  # 将mu01的home目录设置为共享目录/opt    *(async,insecure,rw,no_all_squash,no_root_squash)  # 将mu01的opt目录设置为共享目录</code></pre><p>刷新 NFS 设置：<code>exportfs -ra</code> 查看 NFS 状态：<code>exportfs -v</code><br>注意：设置opt目录为共享目录后，其他节点就不需要重新安装mpi环境了，只需安装运行mpi所需的依赖库就行（后续会具体说到）<br>3.　在子节点 cu01 和 cu02 上挂载 NFS，查看可挂载目录 <code>showmount -e mu01</code>。<br>挂载 opt 与 home 目录：</p><pre><code>mount -t nfs mu01:/opt /optmount -t nfs mu01:/home /home</code></pre><p>设置开机自动挂载：<br>追加下面配置到/etc/fstab</p><pre><code>mu01:/home /home nfs defaults,nfsvers=3 0 0mu01:/opt /opt nfs defaults,nfsvers=3 0 0</code></pre><p><code>df -h</code> 查看是否挂载成功，成功输出如下：<br><img src="https://s1.imagehub.cc/images/2021/11/18/NFS01.png" alt="挂载成功示例"></p><h1 id="子节点-cu01-和-cu02-上MPI环境搭建"><a href="#子节点-cu01-和-cu02-上MPI环境搭建" class="headerlink" title="子节点 cu01 和 cu02 上MPI环境搭建"></a>子节点 cu01 和 cu02 上MPI环境搭建</h1><p>前面我们已经将 mu01 的/opt 目录设置为共享目录，因此子节点无需重新安装mpi，只需将MPI程序的运行依赖安装上即可，即安装 gcc 编译器，在子节点中分别运行如下命令。  </p><pre><code>yum install gcc gcc-c++ gcc-gfortran</code></pre><p>进入/opt/mpich/share <code>cd /opt/mpich/share</code>，编写测试程序mpitest.c <code>vi mpitest.c</code>，内容与之前一样，编译运行，如果能成功执行说明子节点MPI环境配置成功。</p><h1 id="NIS-安装"><a href="#NIS-安装" class="headerlink" title="NIS 安装"></a>NIS 安装</h1><p>集群中的每台主机都需要设计相同的帐号密码是非常麻烦的，因此可通过一个 NIS 主控制服务器管理集群中所有帐号密码,当其他主机有登录需求时再向主控制服务器请求相关账户信息。以 mu01 结点当作 NIS 主控制结点为服务端，cu 结点为客户端。  </p><ol><li>安装相关软件<br>服务端： <code>yum install ypserv rpcbind</code><br>客户端： <code>yum install ypbind</code></li><li>NIS 服务端配置</li></ol><ul><li>设定 NIS 局域网名称：编辑/etc/sysconfig/network 加入配置 NISDOMAIN=mu</li><li>设置主要配置文件：编辑 NIS 配置文件/etc/ypserv.conf，允许特定的主机访问 NIS 服务器,在查询权限部分加入：<br>```</li></ul><p>127.0.0.0/255.255.255.0     : * : * : none<br>192.168.84.0/255.255.255.0 : * : * : none</p><ul><li><pre><code>                      : * : * : deny</code></pre>```</li></ul><ul><li>启动 NIS 与设置开机启动<pre><code>systemctl start ypservsystemctl enable ypserv</code></pre>使用 <code>rpcinfo -u localhost ypserv</code>检测是否启动成功。</li><li>建立用户资料库<br>执行命令 <code>/usr/lib64/yp/ypinit -m</code>建立数据库，在我们的集群环境中，只有mu01一个管理节点，直接按 <code>ctrl D</code> + 回车即设置完毕，将 nis 服务器端的用户信息导入，当用户信息更新时，也需重新执行该命令更新数据库。<br>建立完数据库后，需要将服务重启 <code>systemctl restart ypserv</code>。</li></ul><ol start="3"><li>NIS 客户端配置</li></ol><ul><li>设置 NIS 网域名称与服务端操作相同</li><li>修改用户密码的认证顺序 <code>vim /etc/nsswitch.conf</code> 修改以下配置：<pre><code>passwd:     files nisshadow:     files nisgroup:      files nishosts:      files nis dns</code></pre></li><li>修改客户端配置文件: 配置/etc/yp.conf，添加 <code>domain mu server mu01</code></li><li>修改系统认证文件: <code>vim /etc/sysconfig/authconfig</code>，修改 <code>USENIS=yes</code>；<code>vim /etc/pam.d/system-auth</code>，修改 <code>password sufficient pam_unix.so sha512 shadow nis nullok try_first_pass use_authtok</code>。</li><li>启动服务并设置为开机启动<pre><code>systemctl start ypbindsystemctl enable ypbind</code></pre>在 NIS client 输入 <code>yptest</code> 测试是否配置成功。</li></ul><h1 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h1><p>MPI 并行程序运行时需要设计多机互访免密码，因此下面进行ssh免密登录配置</p><ol><li>配置 mu01 免密登录 cu01 和 cu02。</li></ol><ul><li>生成公钥和授权文件<pre><code>ssh-keygen -t rsa  # 该命令一路回车即可，会在~/.ssh/下生成两个文件cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys  # 将上一步生成的公钥文件复制到authorized_keys授权文件中chmod 700 .ssh  # 设置authorized_keys的权限，下同chmod 600 .ssh/authorized_keys</code></pre></li><li>将授权文件复制给子节点<pre><code>scp ~/.ssh/authorized_keys root@cu01:~/.ssh/scp ~/.ssh/authorized_keys root@cu02:~/.ssh/</code></pre>此时，输入 <code>ssh cu01</code>，会提示输入cu01的密码，输入这一次即可，以后再从mu01切换到cu01就不用再输密码了；cu02操作同cu01。</li></ul><ol start="2"><li>依次配置子节点和其他节点之间的免密登录，在本示例中，还需配置 cu01 与 mu01、cu02 以及 cu02 与 mu01、cu01之间的免密登录，全部配置好后即可实现三台机器互相免密登录。</li></ol><h1 id="多机运行MPI程序"><a href="#多机运行MPI程序" class="headerlink" title="多机运行MPI程序"></a>多机运行MPI程序</h1><p>在mu01节点的/opt/mpich/share/中编写文件mpi_duoji_test.c，输入：</p><pre><code>#include &lt;mpi.h&gt;#include &lt;stdio.h&gt;#include &lt;math.h&gt;int main(argc,argv)int argc;char *argv[];&#123;    int myid,numprocs;    int namelen;    char processor_name[MPI_MAX_PROCESSOR_NAME];    MPI_Init(&amp;argc, &amp;argv);    MPI_Comm_rank(MPI_COMM_WORLD, &amp;myid);    MPI_Comm_size(MPI_COMM_WORLD, &amp;numprocs);    MPI_Get_processor_name(processor_name,&amp;namelen);    fprintf(stderr,&quot;Hello World!process %d of %d on  %s\n&quot;,myid,numprocs,processor_name);    MPI_Finalize();    return 0;&#125;</code></pre><p>然后依次运行如下命令：</p><pre><code>mpicc mpi_duoji_test.c -o ./hello  # 编译mpiexec -hosts cu01,cu02 -np 8 ./hello</code></pre><p>运行结果为：<br><img src="https://s1.imagehub.cc/images/2021/11/18/mpi_duoji.png" alt="mpi多机运行结果"><br>说明程序已在多机上运行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 并行化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> MPI </tag>
+            
+            <tag> 集群 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++使用OpenMp并行记录</title>
+      <link href="/2021/0916/1ed4658b.html"/>
+      <url>/2021/0916/1ed4658b.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>Visual Studio2019已内置支持OpenMP，但在使用之前还需要做一些配置。</p><h2 id="具体步骤（以控制台应用程序为例）"><a href="#具体步骤（以控制台应用程序为例）" class="headerlink" title="具体步骤（以控制台应用程序为例）"></a>具体步骤（以控制台应用程序为例）</h2><ol><li>创建项目<br>创建一个控制台应用程序，并在.cpp文件中输入以下测试代码<br>``` C++<br>#include &lt;omp.h&gt;  //引入openMP头文件<br>#include <iostream></li></ol><p>using namespace std;</p><p>int main()<br>{<br>#pragma omp parallel<br>    {<br>        cout &lt;&lt; “Hello World!\n”;<br>    }<br>}</p><pre><code>如果这时直接编译运行会报以下错误，所以需要对项目进行配置：``` bashc1xx: error C2338: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-c1xx: fatal error C1903: unable to recover from previous error(s); stopping compilationerror MSB6006: &quot;CL.exe&quot; exited with code 2</code></pre><ol start="2"><li>配置项目<br>在项目属性中，进行如下三处配置：<br><img src="https://s1.imagehub.cc/images/2021/09/16/openmp1.png" alt="openmp1配置"></li><li>验证是否成功<br>启动项目，可以在控制台看到以下内容，表明配置成功。<br><img src="https://s1.imagehub.cc/images/2021/09/16/result.png" alt="配置成功结果图"></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 并行化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> OpenMP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>算法的时间复杂度</title>
       <link href="/2021/0822/6dba3ed0.html"/>
       <url>/2021/0822/6dba3ed0.html</url>

@@ -6,7 +6,7 @@
   <link href="https://blog.xuqisheng.top/atom.xml" rel="self"/>
   
   <link href="https://blog.xuqisheng.top/"/>
-  <updated>2021-08-22T02:56:18.044Z</updated>
+  <updated>2021-11-18T12:26:41.045Z</updated>
   <id>https://blog.xuqisheng.top/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS7配置MPI集群</title>
+    <link href="https://blog.xuqisheng.top/2021/1118/3d983c74.html"/>
+    <id>https://blog.xuqisheng.top/2021/1118/3d983c74.html</id>
+    <published>2021-11-18T08:35:49.000Z</published>
+    <updated>2021-11-18T12:26:41.045Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;集群设计&quot;&gt;&lt;a href=&quot;#集群设计&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="并行化" scheme="https://blog.xuqisheng.top/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/"/>
+    
+    
+    <category term="C++" scheme="https://blog.xuqisheng.top/tags/C/"/>
+    
+    <category term="MPI" scheme="https://blog.xuqisheng.top/tags/MPI/"/>
+    
+    <category term="集群" scheme="https://blog.xuqisheng.top/tags/%E9%9B%86%E7%BE%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++使用OpenMp并行记录</title>
+    <link href="https://blog.xuqisheng.top/2021/0916/1ed4658b.html"/>
+    <id>https://blog.xuqisheng.top/2021/0916/1ed4658b.html</id>
+    <published>2021-09-16T03:08:14.000Z</published>
+    <updated>2021-09-16T03:21:33.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;Visual Studio2019已内置支持OpenMP，但在使用之前还需要做一些配置。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="并行化" scheme="https://blog.xuqisheng.top/categories/%E5%B9%B6%E8%A1%8C%E5%8C%96/"/>
+    
+    
+    <category term="C++" scheme="https://blog.xuqisheng.top/tags/C/"/>
+    
+    <category term="OpenMP" scheme="https://blog.xuqisheng.top/tags/OpenMP/"/>
+    
+  </entry>
   
   <entry>
     <title>算法的时间复杂度</title>
